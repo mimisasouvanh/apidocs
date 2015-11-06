@@ -13,7 +13,7 @@ GET /users/<objectId>/messages/<id>/attachments/<id>
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$count|none|The count of related entities can be requested by specifying the `$count` query option.|
 |$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [attachment](../resources/attachment.md) object for supported names. |
 |$select|string|Comma-separated list of properties to include in the response.|
 
