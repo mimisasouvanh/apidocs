@@ -28,12 +28,12 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|String||
+|contentType|String|The MIME type.|
 |id|String| Read-only.|
-|isInline|Boolean||
+|isInline|Boolean|`true` if the attachment is an inline attachment; otherwise, `false`.|
 |lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|name|String||
-|size|Int32||
+|name|String|The attachment's file name.|
+|size|Int32|The length of the attachment in bytes.|
 
 ### Relationships
 None
