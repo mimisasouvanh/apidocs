@@ -13,11 +13,8 @@
 |[List DeviceConfiguration](../api/deviceconfiguration_list.md) | [DeviceConfiguration](deviceconfiguration.md) collection |Get deviceConfiguration object collection. |
 |[Create Device](../api/device_post_devices.md) |[Device](device.md)| Create a new Device by posting to the devices collection.|
 |[List Device](../api/device_list.md) | [Device](device.md) collection |Get device object collection. |
-|[Create DirectoryObject](../api/directoryobject_post_directoryobjects.md) |[DirectoryObject](directoryobject.md)| Create a new DirectoryObject by posting to the directoryObjects collection.|
-|[List DirectoryObject](../api/directoryobject_list.md) | [DirectoryObject](directoryobject.md) collection |Get directoryObject object collection. |
 |[Create DirectoryRole](../api/directoryrole_post_directoryroles.md) |[DirectoryRole](directoryrole.md)| Create a new DirectoryRole by posting to the directoryRoles collection.|
 |[List DirectoryRole](../api/directoryrole_list.md) | [DirectoryRole](directoryrole.md) collection |Get directoryRole object collection. |
-|[Create DirectoryRoleTemplate](../api/directoryroletemplate_post_directoryroletemplates.md) |[DirectoryRoleTemplate](directoryroletemplate.md)| Create a new DirectoryRoleTemplate by posting to the directoryRoleTemplates collection.|
 |[List DirectoryRoleTemplate](../api/directoryroletemplate_list.md) | [DirectoryRoleTemplate](directoryroletemplate.md) collection |Get directoryRoleTemplate object collection. |
 |[Create drive](../api/drive_post_drives.md) |[drive](drive.md)| Create a new drive by posting to the drives collection.|
 |[List drive](../api/drive_list.md) | [drive](drive.md) collection |Get drive object collection. |

@@ -2,13 +2,11 @@
 
 Retrieve the properties and relationships of directoryobject object.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Directory.Read.All_ OR _Directory.AccessAsUser.All_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /users/<objectId>/manager
 GET /directoryObjects/<objectId>
-GET /contacts/<objectId>/manager
 ```
 ### Optional query parameters
 
@@ -29,7 +27,7 @@ Here is an example of the request.
   "name": "get_directoryobject"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/manager
+GET https://graph.microsoft.com/v1.0/directoryObject/<objectId>
 ```
 ##### Response
 Here is an example of the response.

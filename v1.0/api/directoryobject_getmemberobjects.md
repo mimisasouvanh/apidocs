@@ -1,14 +1,16 @@
 # directoryObject: getMemberObjects
+Call the **getMemberObjects** function on a user, contact, group to get the groups **and** directory roles that it is a member of. The function is transitive. 
 
+**Note**: The maximum number of groups and directory roles that can be returned is 2046. If the target object has direct or transitive membership in more than 2046 groups and directory roles, the function returns an HTTP error response with an error code of _Directory_ResultSizeLimitExceeded_.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Group.Read.All_ OR _Group.ReadWrite.All_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/manager/getMemberObjects
-POST /directoryObjects/<objectId>/getMemberObjects
-POST /contacts/<objectId>/manager/getMemberObjects
+POST /users/<id>/getMemberObjects
+POST /groups/<id>/getMemberObjects
+POST /contacts/<id>/getMemberObjects
 
 ```
 ### Request headers
@@ -35,7 +37,7 @@ Here is an example of the request.
   "name": "directoryobject_getmemberobjects"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/manager/getMemberObjects
+POST https://graph.microsoft.com/v1.0/users/<id>/getMemberObjects
 Content-type: application/json
 Content-length: 33
 

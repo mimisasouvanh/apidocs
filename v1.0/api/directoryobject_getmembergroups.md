@@ -1,14 +1,16 @@
 # directoryObject: getMemberGroups
+Call the **getMemberGroups** function on a user, contact, group to get the groups that it is a member of. The function is transitive. 
 
+**Note**: The maximum number of groups that can be returned is 2046. If the target object has direct or transitive membership in more than 2046 groups, the function returns an HTTP error response with an error code of _Directory_ResultSizeLimitExceeded_.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Group.Read.All_ OR _Group.ReadWrite.All_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/manager/getMemberGroups
-POST /directoryObjects/<objectId>/getMemberGroups
-POST /contacts/<objectId>/manager/getMemberGroups
+POST /users/<id>/getMemberGroups
+POST /groups/<id>/getMemberGroups
+POST /contacts/<id>/getMemberGroups
 
 ```
 ### Request headers

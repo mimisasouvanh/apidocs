@@ -2,13 +2,13 @@
 
 Update the properties of directoryobject object.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Directory.WriteRead.All_ OR _Directory.AccessAsUser.All_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /users/<objectId>/manager
+PATCH /users/<objectId>
 PATCH /directoryObjects/<objectId>
-PATCH /contacts/<objectId>/manager
+PATCH /contacts/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
