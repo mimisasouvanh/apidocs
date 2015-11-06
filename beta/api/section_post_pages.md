@@ -11,7 +11,6 @@ POST /me/notes/sections/<id>/pages
 POST /users/<mail>/notes/sections/<id>/pages
 POST /users/<objectId>/notes/sections/<id>/pages
 POST /groups/<objectId>/notes/sections/<id>/pages
-POST /siteCollections/<id>/sites/<id>/notes/sections/<id>/pages
 ```
 ### Request headers
 | Name       | Type | Description|
