@@ -20,11 +20,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|String||
-|isInline|Boolean||
-|lastModifiedDateTime|DateTimeOffset||
-|name|String||
-|size|Int32||
+|contentType|String|The MIME type.|
+|isInline|Boolean|`true` if the attachment is an inline attachment; otherwise, `false`.|
+|lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|name|String|The attachment's file name.|
+|size|Int32|The length of the attachment in bytes.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [attachment](../resources/attachment.md) object in the response body.
