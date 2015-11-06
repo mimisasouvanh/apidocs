@@ -1,36 +1,29 @@
 # Update page
 
-Update the properties of page object.
+Update the content of a page.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:   
+Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+PATCH /me/notes/pages/<id>
+PATCH /users/<mail>/notes/pages/<id>
 PATCH /users/<objectId>/notes/pages/<id>
 PATCH /groups/<objectId>/notes/pages/<id>
-PATCH /drive/root/createdByUser/notes/pages/<id>
+PATCH /siteCollections/<id>/sites/<id>/notes/pages/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
-
-| Property	   | Type	|Description|
-|:---------------|:--------|:----------|
-|content|Stream||
-|contentUrl|String|The URL for the page's HTML content |
-|createdByAppId|String|The unique identifier of the application that created the page |
-|createdTime|DateTimeOffset|The date and time when the page was created in UTC format |
-|lastModifiedTime|DateTimeOffset||
-|links|PageLinks|The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online|
-|self|String||
-|title|String|The title of the page |
+In the request body, supply an array of [patchContentCommand](../resources/patchcontentcommand.md) objects that represent the changes to the page. For more information and examples, see <a href="https://msdn.microsoft.com/en-us/office/office365/howto/onenote-update-page">Update OneNote pages</a>.
 
 ### Response
-If successful, this method returns a `200 OK` response code and updated [page](../resources/page.md) object in the response body.
+If successful, this method returns a `204 No Content` response code.  No JSON data is returned for a PATCH request.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,58 +33,33 @@ Here is an example of the request.
 }-->
 ```http
 PATCH https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>
-Content-type: application/json
-Content-length: 391
+Content-Type: application/json
+Content-Length: 391
 
-{
-  "title": "title-value",
-  "createdByAppId": "createdByAppId-value",
-  "links": {
-    "oneNoteClientUrl": {
-      "href": "href-value"
-    },
-    "oneNoteWebUrl": {
-      "href": "href-value"
-    }
-  },
-  "contentUrl": "contentUrl-value",
-  "content": "content-value",
-  "lastModifiedTime": "datetime-value",
-  "id": "id-value",
-  "self": "self-value",
-  "createdTime": "datetime-value"
-}
+[
+   {
+    'target':'#para-id',
+    'action':'insert',
+    'position':'before',
+    'content':'<img src="image-url-or-part-name" alt="Image above the target paragraph" />'
+  }, 
+  {
+    'target':'#list-id',
+    'action':'append',
+    'content':'<li>Item at the end of the list</li>'
+  }
+]
 ```
+
 ##### Response
-Here is an example of the response.
+Here is an example of the response. No JSON data is returned for a PATCH request.
 <!-- {
   "blockType": "response",
   "truncated": false,
   "@odata.type": "microsoft.graph.page"
 } -->
 ```http
-HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 391
-
-{
-  "title": "title-value",
-  "createdByAppId": "createdByAppId-value",
-  "links": {
-    "oneNoteClientUrl": {
-      "href": "href-value"
-    },
-    "oneNoteWebUrl": {
-      "href": "href-value"
-    }
-  },
-  "contentUrl": "contentUrl-value",
-  "content": "content-value",
-  "lastModifiedTime": "datetime-value",
-  "id": "id-value",
-  "self": "self-value",
-  "createdTime": "datetime-value"
-}
+HTTP/1.1 204 No Content
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
