@@ -31,17 +31,17 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|contentType|String||
-|id|String| Read-only.|
-|isInline|Boolean||
-|lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|name|String||
-|size|Int32||
+|contentType|String|The content type of the attachment.|
+|id|String| The attachment ID.|
+|isInline|Boolean|Set to true if the attachment is inline, such as an embedded image within the body of the item.|
+|lastModifiedDateTime|DateTimeOffset|The last time and date that the attachment was modified.|
+|name|String|The display name of the attachment.|
+|size|Int32|The size in bytes of the attachment.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|item|[OutlookItem](outlookitem.md)| Read-only.|
+|item|[OutlookItem](outlookitem.md)|The attached message or event. Navigation property.|
 
 ### Methods
 

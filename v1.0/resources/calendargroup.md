@@ -2,6 +2,8 @@
 
 A group of calendars.
 
+**Note** Outlook.com supports only the default calendar group which is accessible by the ../me/calendars shortcut. You cannot delete that calendar group.
+
 ### JSON representation
 
 Here is a JSON representation of the resource

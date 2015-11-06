@@ -140,11 +140,11 @@ Here is a JSON representation of the resource
 |[List instances](../api/event_list_instances.md) |[Event](event.md) collection| Get a Event object collection.|
 |[Update](../api/event_update.md) | [event](event.md)	|Update event object. |
 |[Delete](../api/event_delete.md) | None |Delete event object. |
-|[accept](../api/event_accept.md)|None||
-|[decline](../api/event_decline.md)|None||
-|[dismissReminder](../api/event_dismissreminder.md)|None||
-|[snoozeReminder](../api/event_snoozereminder.md)|None||
-|[tentativelyAccept](../api/event_tentativelyaccept.md)|None||
+|[accept](../api/event_accept.md)|None|Accept the specified event.|
+|[decline](../api/event_decline.md)|None|Decline invitation to the specified event.|
+|[dismissReminder](../api/event_dismissreminder.md)|None|Dismiss the reminder for the specified event.|
+|[snoozeReminder](../api/event_snoozereminder.md)|None|Snooze the reminder for the specified event.|
+|[tentativelyAccept](../api/event_tentativelyaccept.md)|None|Tentatively accept the specified event.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

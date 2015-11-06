@@ -2,6 +2,8 @@
 
 A message that represents a meeting request, meeting cancel message, meeting accept message, meeting tentatively accept message, or meeting declined message.
 
+An EventMessage is typically found in the Inbox folder where it arrives as the results of either an event organizer creating a meeting or by an attendee responding to a meeting request. You act on event messages in the same way that you act on Message, with some minor differences described in the following table.
+
 ### JSON representation
 
 Here is a JSON representation of the resource
@@ -84,33 +86,34 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|bccRecipients|[Recipient](recipient.md) collection||
-|body|[ItemBody](itembody.md)||
-|bodyPreview|String||
-|categories|String collection||
-|ccRecipients|[Recipient](recipient.md) collection||
-|changeKey|String||
-|conversationId|String||
-|createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|from|[Recipient](recipient.md)||
-|hasAttachments|Boolean||
-|id|String| Read-only.|
-|importance|String| Possible values are: `Low`, `Normal`, `High`.|
-|isDeliveryReceiptRequested|Boolean||
-|isDraft|Boolean||
-|isRead|Boolean||
-|isReadReceiptRequested|Boolean||
-|lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|meetingMessageType|String| The type of event message: None = 0, MeetingRequest = 1, MeetingCancelled = 2, MeetingAccepted = 3, MeetingTentativelyAccepted = 4, MeetingDeclined = 5  Possible values are: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
-|parentFolderId|String||
-|receivedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|replyTo|[Recipient](recipient.md) collection||
-|sender|[Recipient](recipient.md)||
-|sentDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|subject|String||
-|toRecipients|[Recipient](recipient.md) collection||
-|uniqueBody|[ItemBody](itembody.md)||
-|webLink|String||
+|bccRecipients|[recipient](recipient.md) collection|The Bcc: recipients for the message.|
+|body|[itemBody](itembody.md)|The body of the message.|
+|bodyPreview|String|The first 255 characters of the message body.|
+|categories|String collection|The categories associated with the message.|
+|ccRecipients|[recipient](recipient.md) collection|The Cc: recipients for the message.|
+|changeKey|String|The version of the message.|
+|conversationId|String|The ID of the conversation the email belongs to.|
+|createdDateTime|DateTimeOffset|The date and time the message was created.|
+|from|[recipient](recipient.md)|The mailbox owner and sender of the message.|
+|hasAttachments|Boolean|Indicates whether the message has attachments.|
+|id|String||
+|importance|String| The importance of the message: `Low`, `Normal`, `High`.|
+|isDeliveryReceiptRequested|Boolean|Indicates whether a read receipt is requested for the message.|
+|isDraft|Boolean|Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.|
+|isRead|Boolean|Indicates whether the message has been read.|
+|isReadReceiptRequested|Boolean|Indicates whether a read receipt is requested for the message.|
+|lastModifiedDateTime|DateTimeOffset|The date and time the message was last changed.|
+|meetingMessageType|String| The type of event message: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
+|parentFolderId|String|The unique identifier for the message's parent mailFolder.|
+|receivedDateTime|DateTimeOffset|The date and time the message was received.|
+|replyTo|[recipient](recipient.md) collection|The email addresses to use when replying.|
+|sender|[recipient](recipient.md)|The account that is actually used to generate the message.|
+|sentDateTime|DateTimeOffset|The date and time the message was sent.|
+|subject|String|The subject of the message.|
+|toRecipients|[recipient](recipient.md) collection|The To: recipients for the message.|
+|uniqueBody|[itemBody](itembody.md)|The part of the body of the message that is unique to the current message.|
+|webLink|String|The URL to open the message in Outlook Web App.<br><br>You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.<br><br>The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.<br><br>This URL can be accessed from within an iFrame.|
+
 
 ### Relationships
 | Relationship | Type	|Description|
@@ -127,15 +130,15 @@ Here is a JSON representation of the resource
 |[List attachments](../api/eventmessage_list_attachments.md) |[Attachment](attachment.md) collection| Get a Attachment object collection.|
 |[Update](../api/eventmessage_update.md) | [eventMessage](eventmessage.md)	|Update eventMessage object. |
 |[Delete](../api/eventmessage_delete.md) | None |Delete eventMessage object. |
-|[copy](../api/eventmessage_copy.md)|[Message](message.md)||
-|[createForward](../api/eventmessage_createforward.md)|[Message](message.md)||
-|[createReply](../api/eventmessage_createreply.md)|[Message](message.md)||
-|[createReplyAll](../api/eventmessage_createreplyall.md)|[Message](message.md)||
-|[forward](../api/eventmessage_forward.md)|None||
-|[move](../api/eventmessage_move.md)|[Message](message.md)||
-|[reply](../api/eventmessage_reply.md)|None||
-|[replyAll](../api/eventmessage_replyall.md)|None||
-|[send](../api/eventmessage_send.md)|None||
+|[copy](../api/message_copy.md)|[Message](message.md)|Creates a copy of the message in a mailFolder.|
+|[createForward](../api/message_createforward.md)|[Message](message.md)|Create a draft|
+|[createReply](../api/message_createreply.md)|[Message](message.md)|Create a draft reply to the sender of a message.|
+|[createReplyAll](../api/message_createreplyall.md)|[Message](message.md)|Create a draft reply to all recipients of a message.|
+|[forward](../api/message_forward.md)|None|Forwards a message. The message is then saved in the Sent Items folder.|
+|[move](../api/message_move.md)|[Message](message.md)|Move the message to a mailFolder.|
+|[reply](../api/message_reply.md)|None|Replys to the sender of a message. The message is then saved in the Sent Items folder.|
+|[replyAll](../api/message_replyall.md)|None|Reply to all recipients of a message. The message is then saved in the Sent Items folder.|
+|[send](../api/message_send.md)|None|Sends a previously created message draft. The message is then saved in the Sent Items folder.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
