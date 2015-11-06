@@ -11,7 +11,6 @@ PATCH /me/notes/pages/<id>
 PATCH /users/<mail>/notes/pages/<id>
 PATCH /users/<objectId>/notes/pages/<id>
 PATCH /groups/<objectId>/notes/pages/<id>
-PATCH /siteCollections/<id>/sites/<id>/notes/pages/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
