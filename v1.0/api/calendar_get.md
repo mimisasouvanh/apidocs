@@ -2,7 +2,7 @@
 
 Retrieve the properties and relationships of calendar object.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Calendars.Read_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
