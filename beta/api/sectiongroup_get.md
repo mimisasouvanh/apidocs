@@ -11,7 +11,6 @@ GET /me/notes/sectionGroups/<id>
 GET /users/<mail>/notes/sectionGroups/<id>
 GET /users/<objectId>/notes/sectionGroups/<id>
 GET /groups/<objectId>/notes/sectionGroups/<id>
-GET /siteCollections/<id>/sites/<id>/notes/sectionGroups/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|

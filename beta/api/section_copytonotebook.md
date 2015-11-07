@@ -1,33 +1,37 @@
 # section: copyToNotebook
-
+Copies a section to a specific notebook.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:   
+Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+POST /me/notes/sections/<id>/copyToNotebook
+POST /users/<mail>/notes/sections/<id>/copyToNotebook
 POST /users/<objectId>/notes/sections/<id>/copyToNotebook
 POST /groups/<objectId>/notes/sections/<id>/copyToNotebook
-POST /drive/root/createdByUser/notes/sections/<id>/copyToNotebook
-
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String||
-|siteCollectionId|String||
-|siteId|String||
-|renameAs|String||
+|id|String|The id of the destination notebook. |
+|renameAs|String|The name of the copy. Defaults to the name of the existing item. |
+
+<!--groupId missing-->
+<!--|siteCollectionId|String||
+|siteId|String||-->
 
 ### Response
-If successful, this method returns `200, OK` response code and [CopySectionModel](../resources/copysectionmodel.md) object in the response body.
+If successful, this method returns `202 Accepted` response code and a [copySectionModel](../resources/copysectionmodel.md) object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -51,16 +55,16 @@ Content-length: 130
 ```
 
 ##### Response
-Here is an example of the response.
+Here is an example of the response. <!--TEST no copy*Model in O365 implementation-->
 <!-- {
   "blockType": "response",
   "truncated": false,
   "@odata.type": "microsoft.graph.copysectionmodel"
 } -->
 ```http
-HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 276
+HTTP/1.1 202 Accepted
+Content-Type: application/json
+Content-Length: 276
 
 {
   "isDefault": true,

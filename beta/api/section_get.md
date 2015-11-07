@@ -7,11 +7,10 @@ Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or No
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/notes/sectionGroups/<id>/sections/<id>
-GET /users/<mail>/notes/sectionGroups/<id>/sections/<id>
-GET /users/<objectId>/notes/sectionGroups/<id>/sections/<id>
-GET /groups/<objectId>/notes/sectionGroups/<id>/sections/<id>
-GET /siteCollections/<id>/sites/<id>/notes/sectionGroups/<id>/sections/<id>
+GET /me/notes/sections/<id>
+GET /users/<mail>/notes/sections/<id>
+GET /users/<objectId>/notes/sections/<id>
+GET /groups/<objectId>/notes/sections/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
