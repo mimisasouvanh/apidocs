@@ -1,8 +1,8 @@
 # Delete calendar
 
-Delete calendar.
+Delete a calendar.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Calendars.ReadWrite_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
