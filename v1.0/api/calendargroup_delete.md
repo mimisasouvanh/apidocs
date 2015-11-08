@@ -1,8 +1,8 @@
 # Delete calendarGroup
 
-Delete calendarGroup.
+Delete a calendar group.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+The following **scopes** are required to execute this API: _Calendars.ReadWrite_
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
