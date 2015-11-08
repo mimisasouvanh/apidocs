@@ -1,32 +1,37 @@
 # notebook: copyNotebook
-
+Copies a notebook to the Notebooks folder in the destination Documents library. The folder is created if it doesn't exist.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:   
+Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/notes/notebooks/<id>/copyNotebook
-POST /groups/<objectId>/notes/notebooks/<id>/copyNotebook
-POST /drive/root/createdByUser/notes/notebooks/<id>/copyNotebook
+GET /me/notes/notebooks/<id>/copyNotebook
+GET /users/<mail>/notes/notebooks/<id>/copyNotebook
+GET /users/<objectId>/notes/notebooks/<id>/copyNotebook
+GET /groups/<objectId>/notes/notebooks/<id>/copyNotebook
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|siteCollectionId|String||
-|siteId|String||
-|renameAs|String||
+|renameAs|String|The name of the copy. Defaults to the name of the existing item. |
+
+<!--groupId missing-->
+<!--|siteCollectionId|String||
+|siteId|String||-->
 
 ### Response
-If successful, this method returns `200, OK` response code and [CopyNotebookModel](../resources/copynotebookmodel.md) object in the response body.
+If successful, this method returns `202 Accepted` response code and a [copyNotebookModel](../resources/copynotebookmodel.md) object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -49,16 +54,16 @@ Content-length: 110
 ```
 
 ##### Response
-Here is an example of the response.
+Here is an example of the response. <!--TEST no copy*Model in O365 implementation-->
 <!-- {
   "blockType": "response",
   "truncated": false,
   "@odata.type": "microsoft.graph.copynotebookmodel"
 } -->
 ```http
-HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 516
+HTTP/1.1 202 Accepted
+Content-Type: application/json
+Content-Length: 516
 
 {
   "isDefault": true,

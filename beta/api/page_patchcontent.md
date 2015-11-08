@@ -6,10 +6,10 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+POST /me/notes/pages/<id>/patchContent
+POST /users/<mail>/notes/pages/<id>/patchContent
 POST /users/<objectId>/notes/pages/<id>/patchContent
 POST /groups/<objectId>/notes/pages/<id>/patchContent
-POST /drive/root/createdByUser/notes/pages/<id>/patchContent
-
 ```
 ### Request headers
 | Name       | Type | Description|

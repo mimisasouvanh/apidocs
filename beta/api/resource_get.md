@@ -11,7 +11,6 @@ GET /me/notes/resources/<id>
 GET /users/<mail>/notes/resources/<id>
 GET /users/<objectId>/notes/resources/<id>
 GET /groups/<objectId>/notes/resources/<id>
-GET /siteCollections/<id>/sites/<id>/notes/resources/<id>
 ```
 
 ### Request headers

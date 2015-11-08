@@ -2,15 +2,15 @@
 
 Delete a OneNote page.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
-
+One of the following **scopes** is required to execute this API:   
+Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+DELETE /me/notes/pages/<id>
+DELETE /users/<mail>/notes/pages/<id>
 DELETE /users/<objectId>/notes/pages/<id>
 DELETE /groups/<objectId>/notes/pages/<id>
-DELETE /drive/root/createdByUser/notes/pages/<id>
-
 ```
 ### Request headers
 | Name       | Type | Description|
