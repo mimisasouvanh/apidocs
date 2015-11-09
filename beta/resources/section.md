@@ -1,6 +1,6 @@
 # section resource type
 
-A section in a OneNote notebook. Section can contain pages.
+A section in a OneNote notebook. Sections can contain pages.
 
 ### JSON representation
 
@@ -65,10 +65,10 @@ Here is a JSON representation of the resource
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get section](../api/section_get.md) | [section](section.md) |Read the properties and relationships of the section object.|
-|[Create Page](../api/section_post_pages.md) |[page](page.md)| Create a new page by posting to the pages collection in the specified section.|
-|[List pages](../api/section_list_pages.md) |[page](page.md) collection| Get a collection of page objects in the specified section.|
-|[copyToNotebook](../api/section_copytonotebook.md)|None|Copy the section in a specific notebook.|
+|[Get section](../api/section_get.md) | [section](section.md) |Read the properties and relationships of the section.|
+|[Create page](../api/section_post_pages.md) |[page](page.md)| Create a page by posting to the pages collection in the specified section.|
+|[List pages](../api/section_list_pages.md) |[page](page.md) collection| Get a collection of pages in the specified section.|
+|[copyToNotebook](../api/section_copytonotebook.md)|None|Copy the section to a specific notebook.|
 |[copyToSectionGroup](../api/section_copytosectiongroup.md)|None|Copy the section to a specific section group.|
 
 

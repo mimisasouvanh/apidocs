@@ -60,9 +60,9 @@ Here is a JSON representation of the resource
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get page](../api/page_get.md) | [page](page.md) |Read the properties and relationships of the page object.|
+|[Get page](../api/page_get.md) | [page](page.md) |Read the properties and relationships of the page.|
 |[Update page content](../api/page_update.md) | None |Update the HTML content of the page. |
-|[Delete page](../api/page_delete.md) | None |Delete the page object. |
+|[Delete page](../api/page_delete.md) | None |Delete the page. |
 |[copyToSection](../api/page_copytosection.md)| None |Copies the page to a specific section.|
 
 

@@ -12,7 +12,7 @@ You can get the binary data of a resource, but getting a JSON representation of 
   "@odata.type": "microsoft.graph.resource"
 }-->
 
-You can get the binary data of a specific resource by sending a GET request to the resource's `content` endpoint:
+Get the binary data of a specific resource by sending a GET request to the resource's `content` endpoint:
 
 ```
 GET ../notes/resources/<id>/content
@@ -33,7 +33,7 @@ In the page HTML, an `img` tag includes endpoints for the original image resourc
     data-fullres-src-type="media-type" ... />
 ```
 
-An `object` tag (that represents files such as PDF, DOCX, etc.) includes the endpoint for the file resource in the `data` attribute:
+An `object` tag (that represents files such as PDF, DOCX, and PNG) includes the endpoint for the file resource in the `data` attribute:
 
 ```
 <object

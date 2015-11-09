@@ -32,7 +32,7 @@ GET /groups/<objectId>/notes/notebooks/<id>/sections
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [section](../resources/section.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [section](../resources/section.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -42,6 +42,8 @@ Here is an example of the request.
 }-->
 ```http
 GET https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks/<id>/sections
+Authorization: Bearer <token>
+Accept: application/json
 ```
 ##### Response
 Here is an example of the response.
@@ -53,8 +55,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 341
+Content-Type: application/json
+Content-Length: 341
+...
 
 {
   "value": [

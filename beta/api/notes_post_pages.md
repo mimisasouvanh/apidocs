@@ -21,18 +21,19 @@ POST /groups/<objectId>/notes/pages
 | Content-Type | string | `text/html` or `application/xhtml+xml` for the HTML content, including for the required "Presentation" part of multipart requests. Multipart requests use the `multipart/form-data; boundary=your-boundary` content type. |
 
 ### Request body
-In the request body, supply the page HTML content.
+In the request body, supply the HTML content for the page.
 
 The body can contain HTML placed directly in the request body, or it can contain a multipart message format as shown in the example. If you're sending binary data, then you must send a multipart request.
 
 ### Response
-If successful, this method returns `201 Created` response code and the new [page](../resources/page.md) object in the response body.
-
-You can use the `sectionName` query parameter to create a page in a specific section. Example: `../notes/pages?sectionName=My%20section`. If the section doesn't exist (or was renamed), the API will create a new section.
+If successful, this method returns a `201 Created` response code and the new [page](../resources/page.md) object in the response body.
 
 ### Example
 ##### Request
 Here is an example of the request. 
+
+You can use the `sectionName` query parameter to create a page in a specific section. Example: `../notes/pages?sectionName=My%20section`. If the section doesn't exist (or was renamed), the API will create a new section.
+
 <!-- {
   "blockType": "request",
   "name": "create_page_from_notes"

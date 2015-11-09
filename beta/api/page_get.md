@@ -69,7 +69,12 @@ Content-Length: 391
   "lastModifiedTime": "datetime-value",
   "id": "id-value",
   "self": "self-value",
-  "createdTime": "datetime-value"
+  "createdTime": "datetime-value",
+  "parentSection": {
+    "id": "parentSection-id-value",
+    "name": "parentSection-name-value",
+    "self": "parentSection-self-value"
+  }
 }
 ```
 

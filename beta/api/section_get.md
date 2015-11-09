@@ -37,6 +37,8 @@ Here is an example of the request.
 }-->
 ```http
 GET https://graph.microsoft.com/beta/users/<objectId>/notes/sections/<id>
+Authorization: Bearer <token>
+Accept: application/json
 ```
 ##### Response
 Here is an example of the response.

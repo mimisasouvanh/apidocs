@@ -28,7 +28,7 @@ In the request body, provide a JSON object with the following parameters.
 |renameAs|String|The name of the copy. Defaults to the name of the existing item. |
 
 ### Response
-If successful, this method returns `202 Accepted` response code.
+If successful, this method returns a `202 Accepted` response code.
 
 ### Example
 Here is an example of how to call this API.
