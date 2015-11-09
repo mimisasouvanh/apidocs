@@ -15,8 +15,7 @@ GET /groups/<objectId>/notes/sectionGroups/<id>
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands parentNotebook and parentSectionGroup and selects their id, name, and self properties. Valid values for section groups are sections, sectionGroups, parentNotebook, and parentSectionGroup. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands `parentNotebook` and `parentSectionGroup` and selects their `id`, `name`, and `self` properties. Valid values for section groups are `sections`, `sectionGroups`, `parentNotebook`, and `parentSectionGroup`. |
 |$select|string|Comma-separated list of properties to include in the response.|
 
 ### Request headers
@@ -51,7 +50,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 309
+Content-Length: 139
 ...
 
 {

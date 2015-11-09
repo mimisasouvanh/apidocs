@@ -23,6 +23,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
+|groupId|String|The id of the group to copy to. Use only when copying to an Office 365 group.|
 |id|String|The id of the destination section group. |
 |renameAs|String|The name of the copy. Defaults to the name of the existing item. |
 
@@ -31,7 +32,7 @@ In the request body, provide a JSON object with the following parameters.
 |siteId|String||-->
 
 ### Response
-If successful, this method returns `202 Accepted` response code and a [copySectionModel](../resources/copysectionmodel.md) object in the response body.
+If successful, this method returns `202 Accepted` response code.
 
 ### Example
 Here is an example of how to call this API.
@@ -43,13 +44,11 @@ Here is an example of the request.
 }-->
 ```http
 POST https://graph.microsoft.com/beta/users/<objectId>/notes/sections/<id>/copyToSectionGroup
-Content-type: application/json
-Content-length: 130
+Content-Type: application/json
+Content-Length: 48
 
 {
   "id": "id-value",
-  "siteCollectionId": "siteCollectionId-value",
-  "siteId": "siteId-value",
   "renameAs": "renameAs-value"
 }
 ```
@@ -63,20 +62,6 @@ Here is an example of the response. <!--TEST no copy*Model in O365 implementatio
 } -->
 ```http
 HTTP/1.1 202 Accepted
-Content-Type: application/json
-Content-Length: 276
-
-{
-  "isDefault": true,
-  "pagesUrl": "pagesUrl-value",
-  "name": "name-value",
-  "createdBy": "createdBy-value",
-  "lastModifiedBy": "lastModifiedBy-value",
-  "lastModifiedTime": "datetime-value",
-  "id": "id-value",
-  "self": "self-value",
-  "createdTime": "datetime-value"
-}
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

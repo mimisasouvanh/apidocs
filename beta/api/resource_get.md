@@ -1,6 +1,6 @@
 # Get resource
 
-Retrieve the properties and relationships of a file or image [resource](../resources/resource.md) object.
+Retrieve the binary data of a file or image [resource](../resources/resource.md) object.
 ### Prerequisites
 One of the following **scopes** is required to execute this API:  
 Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or Notes.ReadWrite.All 
@@ -24,7 +24,7 @@ Do not supply a request body for this method.
 If successful, this method returns a `200 OK` response code and the image or file binary data in the response body. 
 ### Example
 ##### Request
-Here is an example of the request. Using the content endpoint for the resource is the same as using $value. Images won't render directly in a browser because they require authorization to retrieve them, like the rest of the page contents. 
+Here is an example of the request. Using the `content` endpoint for the resource is the same as using `$value`. 
 <!-- {
   "blockType": "request",
   "name": "get_resource"
@@ -33,8 +33,14 @@ Here is an example of the request. Using the content endpoint for the resource i
 GET https://graph.microsoft.com/beta/users/<objectId>/notes/resources/<id>/content
 Authorization: Bearer <token>
 ```
+Note: Images won't render directly in a browser because they require authorization to retrieve them, like the rest of the page content.
+
 ##### Response
-The binary data of the image or file resource.
+```http
+HTTP/1.1 200 OK
+
+...binary data...
+```
 <!-- {
   "blockType": "response",
   "truncated": false,

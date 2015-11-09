@@ -15,7 +15,7 @@ GET /groups/<objectId>/notes/pages/<id>
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands parentSection and selects its id, name, and self properties. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands `parentSection` and selects the section's `id`, `name`, and `self` properties. Valid values for pages are `parentNotebook` and `parentSection`.|
 |$select|string|Comma-separated list of properties to include in the response.|
 
 ### Request headers

@@ -1,13 +1,7 @@
 # notes resource type
 
-The entry point to access OneNote resources.
+The entry point to OneNote resources.
 
-<!--
-
-### JSON representation
-
-Here is a JSON representation of the resource
--->
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
@@ -20,52 +14,14 @@ Here is a JSON representation of the resource
   "@odata.type": "microsoft.graph.notes"
 }-->
 
-<!--returns a 404, doesn't return json
-```json
-{
-  "id": "String-value (identifier)",
-  "notebooks": [
-    {
-      "@odata.type": "microsoft.graph.notebook"
-    }
-  ],
-  "pages": [
-    {
-      "@odata.type": "microsoft.graph.page"
-    }
-  ],
-  "resources": [
-    {
-      "@odata.type": "microsoft.graph.resource"
-    }
-  ],
-  "sectionGroups": [
-    {
-      "@odata.type": "microsoft.graph.sectiongroup"
-    }
-  ],
-  "sections": [
-    {
-      "@odata.type": "microsoft.graph.section"
-    }
-  ]
-}
-
-```
-### Properties
-| Property	   | Type	|Description|
-|:---------------|:--------|:----------|
-|id|String| Read-only.|
--->
-
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|notebooks|[notebook](notebook.md) collection|The OneNote notebooks that are owned by the user, site, or group. Read-only. Nullable.|
-|pages|[page](page.md) collection|The pages in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.|
-|resources|[resource](resource.md) collection |The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can [get a specific resource by id](resource.md#properties). Read-only. Nullable.|
-|sectionGroups|[sectionGroup](sectiongroup.md) collection|The section groups in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.|
-|sections|[section](section.md) collection|The sections in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.|
+|notebooks|[notebook](notebook.md) collection|The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.|
+|pages|[page](page.md) collection|The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
+|resources|[resource](resource.md) collection |The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can [get the binary content of a specific resource by id](resource.md). Read-only. Nullable.|
+|sectionGroups|[sectionGroup](sectiongroup.md) collection|The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
+|sections|[section](section.md) collection|The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
 
 
 ### Methods

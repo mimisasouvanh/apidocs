@@ -1,6 +1,6 @@
 # Create section
 
-Create a new [section](../resources/section.md) in the specified notebook.
+Create a new [section](../resources/section.md) in the specified section group.
 ### Prerequisites
 One of the following **scopes** is required to execute this API:   
 Notes.Create, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All
@@ -25,7 +25,7 @@ Within the same hierarchy level, section names must be unique. The name cannot c
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [section](../resources/section.md) object in the response body.
+If successful, this method returns `201 Created` response code and [section](../resources/section.md) object in the response body.
 
 ### Example
 ##### Request

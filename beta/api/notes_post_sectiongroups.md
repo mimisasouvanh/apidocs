@@ -14,14 +14,15 @@ POST /drive/root/createdByUser/notes/sectionGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
 In the request body, supply a JSON representation of [SectionGroup](../resources/sectiongroup.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [SectionGroup](../resources/sectiongroup.md) object in the response body.
+If successful, this method returns `201 Created` response code and [SectionGroup](../resources/sectiongroup.md) object in the response body.
 
 ### Example
 ##### Request

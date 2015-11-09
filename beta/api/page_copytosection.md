@@ -23,14 +23,12 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
+|groupId|String|The id of the group to copy to. Use only when copying to an Office 365 group.|
 |id|String|The id of the destination section.|
 
-<!--groupId missing-->
-<!--|siteCollectionId|String||
-|siteId|String||-->
 
 ### Response
-If successful, this method returns `202 Accepted` response code and a [copyPageModel](../resources/copypagemodel.md) object in the response body.
+If successful, this method returns `202 Accepted` response code.
 
 ### Example
 Here is an example of how to call this API.
@@ -43,7 +41,7 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>/copyToSection
 Content-type: application/json
-Content-length: 98
+Content-length: 28
 
 {
   "id": "id-value"
@@ -51,7 +49,7 @@ Content-length: 98
 ```
 
 ##### Response
-Here is an example of the response. <!--TEST no copy*Model in O365 implementation-->
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
@@ -59,59 +57,6 @@ Here is an example of the response. <!--TEST no copy*Model in O365 implementatio
 } -->
 ```http
 HTTP/1.1 202 Accepted
-Content-Type: application/json
-Content-Length: 1258
-
-{
-  "parentSection": {
-    "isDefault": true,
-    "pagesUrl": "pagesUrl-value",
-    "name": "name-value",
-    "createdBy": "createdBy-value",
-    "lastModifiedBy": "lastModifiedBy-value",
-    "lastModifiedTime": "datetime-value",
-    "id": "id-value",
-    "self": "self-value",
-    "createdTime": "datetime-value"
-  },
-  "parentNotebook": {
-    "isDefault": true,
-    "userRole": "userRole-value",
-    "isShared": true,
-    "sectionsUrl": "sectionsUrl-value",
-    "sectionGroupsUrl": "sectionGroupsUrl-value",
-    "links": {
-      "oneNoteClientUrl": {
-        "href": "href-value"
-      },
-      "oneNoteWebUrl": {
-        "href": "href-value"
-      }
-    },
-    "name": "name-value",
-    "createdBy": "createdBy-value",
-    "lastModifiedBy": "lastModifiedBy-value",
-    "lastModifiedTime": "datetime-value",
-    "id": "id-value",
-    "self": "self-value",
-    "createdTime": "datetime-value"
-  },
-  "title": "title-value",
-  "createdByAppId": "createdByAppId-value",
-  "links": {
-    "oneNoteClientUrl": {
-      "href": "href-value"
-    },
-    "oneNoteWebUrl": {
-      "href": "href-value"
-    }
-  },
-  "contentUrl": "contentUrl-value",
-  "lastModifiedTime": "datetime-value",
-  "id": "id-value",
-  "self": "self-value",
-  "createdTime": "datetime-value"
-}
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

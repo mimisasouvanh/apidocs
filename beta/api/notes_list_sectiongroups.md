@@ -15,10 +15,10 @@ GET /groups/<objectId>/notes/sectionGroups
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands parentNotebook and parentSectionGroup and selects their id, name, and self properties. Valid values for section groups are sections, sectionGroups, parentNotebook, and parentSectionGroup. |
+|$count|none|The count of related entities.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands `parentNotebook` and `parentSectionGroup` and selects their `id`, `name`, and `self` properties. Valid values for section groups are `sections`, `sectionGroups`, `parentNotebook`, and `parentSectionGroup`. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection. The default is name asc.|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection. The default is `name asc`.|
 |$select|string|Comma-separated list of properties to include in the response.|
 |$skip|int|The number of items to skip in a result set.|
 |$top|int|The number of items to return in a result set.|
