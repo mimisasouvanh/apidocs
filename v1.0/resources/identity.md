@@ -1,10 +1,12 @@
 # identity resource type
 
-The Identity type represents an identity of an _actor_. For example, and actor can be a user, device, or application.  
+The **identity** resource represents an identity of an _actor_. For example, and actor can be a user, device, or application.
+ 
+ 
 
 ### JSON representation
 
-Here is a JSON representation of the resource
+Here is a JSON representation of the resource.
 
 <!-- {
   "blockType": "resource",

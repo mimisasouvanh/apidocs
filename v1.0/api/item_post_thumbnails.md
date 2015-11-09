@@ -3,6 +3,9 @@
 Use this API to create a new thumbnailSet.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * Files.ReadWrite
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -11,10 +14,6 @@ POST /drive/items/<id>/thumbnails
 POST /drives/<id>/root/thumbnails
 
 ```
-### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [thumbnailSet](../resources/thumbnailset.md) object.

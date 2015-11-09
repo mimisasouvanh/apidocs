@@ -1,8 +1,13 @@
-# item: invite
+# Send a sharing invitation 
 
+Sends a sharing invitation to an existing item. A sharing invitation creates a unique sharing link and sends an email to the recipient of the invitation that includes the sharing link.
+Using the invite action is more secure than creating a sharing link, because the link is only valid for the recipient of the sharing invitation and cannot be reused by other users.
 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * Files.ReadWrite
+  
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -11,24 +16,20 @@ POST /drive/items/<id>/invite
 POST /drives/<id>/root/invite
 
 ```
-### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|recipients|recipients||
-|message|String||
-|requireSignIn|Boolean||
-|sendInvitation|Boolean||
-|roles|String||
+|recipients|recipients|A list of recipient email addresses for the sharing invitation.|
+|message|String|A plain text formatted message that is included in the sharing invitation. Maximum length 2000 characters.|
+|requireSignIn|Boolean|Specifies where the recipient of the invitation is required to sign-in to view the shared item.|
+|sendInvitation|Boolean|Specifies if an email or post is generated (false) or if the permission is just created (true).|
+|roles|String|Specify the roles that are be granted to the recipients of the sharing invitation.|
 
 ### Response
-If successful, this method returns `200, OK` response code and [permission](../resources/permission.md) collection object in the response body.
+If successful, this method returns `200 OK` response code and [permission](../resources/permission.md) collection object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -112,8 +113,7 @@ Content-length: 939
       },
       "roles": [
         "roles-value"
-      ],
-      "shareId": "shareId-value"
+      ]
     }
   ]
 }

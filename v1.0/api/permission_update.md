@@ -1,8 +1,11 @@
 # Update permission
 
-Update the properties of permission object.
+Update the properties of an existing permission object. Only the roles property can be modified. 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * Files.ReadWrite
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -10,22 +13,18 @@ PATCH /drive/root/permissions/<id>
 PATCH /drive/items/<id>/permissions/<id>
 PATCH /drives/<id>/root/permissions/<id>
 ```
-### Optional request headers
+
+### Request headers
 | Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+|:---------------|:--------|:----------|
+| if-match  | string  | If this request header is included and the eTag (or cTag) provided does not match the current tag on the item, a `412 Precondition Failed` response is returned and the item will not be deleted.|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|grantedTo|identitySet||
-|inheritedFrom|itemReference||
-|invitation|sharingInvitation||
-|link|sharingLink||
-|roles|String||
-|shareId|String||
+|roles|String|An array of permission types.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [permission](../resources/permission.md) object in the response body.
@@ -77,8 +76,7 @@ Content-length: 762
   },
   "roles": [
     "roles-value"
-  ],
-  "shareId": "shareId-value"
+  ]
 }
 ```
 ##### Response
@@ -129,8 +127,7 @@ Content-length: 762
   },
   "roles": [
     "roles-value"
-  ],
-  "shareId": "shareId-value"
+  ]
 }
 ```
 
