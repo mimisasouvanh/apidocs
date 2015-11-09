@@ -15,8 +15,7 @@ GET /groups/<objectId>/notes/notebooks/<id>
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|omma-separated list of relationships to expand and include in the response. Valid values for notebooks are sections and sectionGroups. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. Valid values for notebooks are `sections` and `sectionGroups`. |
 |$select|string|Comma-separated list of properties to include in the response.|
 
 ### Request headers

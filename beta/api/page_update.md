@@ -1,6 +1,6 @@
 # Update page
 
-Update the content of a page.
+Update the content of a OneNote page.
 ### Prerequisites
 One of the following **scopes** is required to execute this API:   
 Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
@@ -40,12 +40,12 @@ Content-Length: 391
     'target':'#para-id',
     'action':'insert',
     'position':'before',
-    'content':'<img src="image-url-or-part-name" alt="Image above the target paragraph" />'
+    'content':'<img src="image-url-or-part-name" alt="image-alt-text" />'
   }, 
   {
     'target':'#list-id',
     'action':'append',
-    'content':'<li>Item at the end of the list</li>'
+    'content':'<li>new-page-content</li>'
   }
 ]
 ```

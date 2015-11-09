@@ -16,15 +16,15 @@ POST /groups/<objectId>/notes/sections/<id>/pages
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
-| Content-Type | string | `text/html` or `application/xhtml+xml` for the HTML content, including the required "Presentation" part of multipart requests. Multi-part requests use the `multipart/form-data; boundary=your-boundary` content type. |
+| Content-Type | string | `text/html` or `application/xhtml+xml` for the HTML content, including for the required "Presentation" part of multipart requests. Multipart requests use the `multipart/form-data; boundary=your-boundary` content type. |
 
 ### Request body
 In the request body, supply the page HTML content.
 
-The body can contain HTML placed directly in the request body, or it can contain a multipart message format as shown in the example. 
+The body can contain HTML placed directly in the request body, or it can contain a multipart message format as shown in the example. If you're sending binary data, then you must send a multipart request.
 
 ### Response
-If successful, this method returns `201, Created` response code and the new [page](../resources/page.md) object in the response body.
+If successful, this method returns `201 Created` response code and the new [page](../resources/page.md) object in the response body.
 
 ### Example
 ##### Request

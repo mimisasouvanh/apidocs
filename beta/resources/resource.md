@@ -2,9 +2,7 @@
 
 An image or other file resource on a OneNote page. 
 
-### JSON representation
-
-Here is a JSON representation of the resource
+You can get the binary data of a resource, but getting a JSON representation of a resource object or a resource collection is not supported.
 
 <!-- {
   "blockType": "resource",
@@ -13,31 +11,20 @@ Here is a JSON representation of the resource
   ],
   "@odata.type": "microsoft.graph.resource"
 }-->
-<!--
-```json
-{
-  "content": "Stream-value",
-  "contentUrl": "String-value",
-  "id": "String-value (identifier)",
-  "self": "String-value"
-}
 
-```
--->
-### Properties
-You can get the binary data of a specific resource by sending a GET request to the resource's content endpoint:
+You can get the binary data of a specific resource by sending a GET request to the resource's `content` endpoint:
 
 ```
 GET ../notes/resources/<id>/content
 ```
 
-The file's resource URI is returned when you [get a page's HTML content](../api/page_get.md) with the following request:
+The file's resource URI is returned when you get a page's HTML content using the following request:
 
 ```
 GET ../notes/pages/<id>/content
 ```
 
-In the page HTML, an img tag includes endpoints for the original image resource in the data-fullres-src attribute and the optimized image in the src attribute:
+In the page HTML, an `img` tag includes endpoints for the original image resource in the `data-fullres-src` attribute and the optimized image in the `src` attribute:
 ```
 <img 
     src="image-resource-url"  
@@ -46,7 +33,7 @@ In the page HTML, an img tag includes endpoints for the original image resource 
     data-fullres-src-type="media-type" ... />
 ```
 
-An object tag (that represents files such as PDF, DOCX, etc.) includes the endpoint for the file resource in the data attribute:
+An `object` tag (that represents files such as PDF, DOCX, etc.) includes the endpoint for the file resource in the `data` attribute:
 
 ```
 <object
@@ -55,7 +42,8 @@ An object tag (that represents files such as PDF, DOCX, etc.) includes the endpo
     type="media-type" ... />
 ```
 
-<!--removed the properties table because you can't get the OData object, just the content.-->
+### Properties
+None
 
 ### Relationships
 None

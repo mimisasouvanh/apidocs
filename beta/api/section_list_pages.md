@@ -17,12 +17,12 @@ GET /groups/<objectId>/notes/sections/<id>/pages
 |:---------------|:--------|:-------|
 |$search|string|The term or phrase to search for in the page title, page body, image alt text, and image OCR text. Search queries return results sorted by relevance.|
 |$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands parentSection and selects its id, name, and self properties. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands `parentSection` and selects the section's `id`, `name`, and `self` properties. Valid values for pages are `parentNotebook` and `parentSection`.|
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection. The default for pages is `lastModifiedTime desc`.|
 |$select|string|Comma-separated list of properties to include in the response.|
 |$skip|int|The number of items to skip in a result set.|
-|$top|int|The number of items to return in a result set. The default value for pages is 20 and the maximum is 100. The default query returns an @odata.nextLink that you can use to page through the result set. |
+|$top|int|The number of items to return in a result set. The default value for pages is 20 and the maximum is 100. The default query returns an `@odata.nextLink` that you can use to page through the result set. |
 
 ### Request headers
 | Name       | Type | Description|
