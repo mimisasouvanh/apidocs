@@ -1,14 +1,14 @@
 # List registeredDevices
 
-Retrieve a list of directoryobject objects.
+Get the list of user's registered devices.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+*User.Read; User.ReadWrite; User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All*
+
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/registeredDevices
-GET /drive/root/createdByUser/registeredDevices
-GET /drive/root/lastModifiedByUser/registeredDevices
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -17,9 +17,10 @@ GET /drive/root/lastModifiedByUser/registeredDevices
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.
@@ -46,13 +47,12 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 152
 
 {
   "value": [
     {
+      "id": "id-value",
       "objectType": "objectType-value",
-      "objectId": "objectId-value",
       "deletionTimestamp": "datetime-value"
     }
   ]

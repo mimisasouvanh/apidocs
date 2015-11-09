@@ -1,20 +1,19 @@
 # Create createdObject
 
-Use this API to create a new createdObject.
+Use this API to create a new created object.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+*Directory.ReadWrite.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/createdObjects
-POST /drive/root/createdByUser/createdObjects
-POST /drive/root/lastModifiedByUser/createdObjects
-
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -31,7 +30,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/createdObjects
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
@@ -44,11 +43,10 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 111
 
 {
-  "objectType": "objectType-value",
-  "objectId": "objectId-value",
+  "id": "objectId-value",
+  "objectType": "objectType-value",  
   "deletionTimestamp": "datetime-value"
 }
 ```
