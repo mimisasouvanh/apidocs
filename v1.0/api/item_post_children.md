@@ -1,8 +1,11 @@
-# Create children
+# Create an item in a collection
 
-Use this API to create a new children.
+Use this API to create a new item in a collection.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * Files.ReadWrite
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -11,10 +14,6 @@ POST /drive/items/<id>/children
 POST /drives/<id>/root/children
 
 ```
-### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -134,28 +133,6 @@ Content-length: 3179
     "altitude": 99,
     "latitude": 99,
     "longitude": 99
-  },
-  "openWith": {
-    "web": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    },
-    "webEmbedded": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    }
   },
   "photo": {
     "height": 99,
