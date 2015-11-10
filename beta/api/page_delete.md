@@ -19,7 +19,7 @@ DELETE /groups/<objectId>/notes/pages/<id>
 
 
 ### Response
-If successful, this method returns `204 No Content` response code. It does not return anything in the response body.
+If successful, this method returns a `204 No Content` response code. It does not return anything in the response body.
 
 ### Example
 ##### Request
@@ -30,6 +30,7 @@ Here is an example of the request.
 }-->
 ```http
 DELETE https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>
+Authorization: Bearer <token>
 ```
 ##### Response
 Here is an example of the response.

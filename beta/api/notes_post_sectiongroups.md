@@ -22,7 +22,7 @@ In the request body, supply a JSON representation of [SectionGroup](../resources
 
 
 ### Response
-If successful, this method returns `201 Created` response code and [SectionGroup](../resources/sectiongroup.md) object in the response body.
+If successful, this method returns a `201 Created` response code and [sectionGroup](../resources/sectiongroup.md) object in the response body.
 
 ### Example
 ##### Request

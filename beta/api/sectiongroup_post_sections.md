@@ -25,7 +25,7 @@ Within the same hierarchy level, section names must be unique. The name cannot c
 
 
 ### Response
-If successful, this method returns `201 Created` response code and [section](../resources/section.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [section](../resources/section.md) object in the response body.
 
 ### Example
 ##### Request

@@ -28,7 +28,7 @@ In the request body, provide a JSON object with the following parameters.
 
 
 ### Response
-If successful, this method returns `202 Accepted` response code.
+If successful, this method returns a `202 Accepted` response code.
 
 ### Example
 Here is an example of how to call this API.
@@ -40,8 +40,8 @@ Here is an example of the request.
 }-->
 ```http
 POST https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>/copyToSection
-Content-type: application/json
-Content-length: 28
+Content-Type: application/json
+Content-Length: 28
 
 {
   "id": "id-value"

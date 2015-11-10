@@ -32,7 +32,7 @@ In the request body, provide a JSON object with the following parameters.
 |siteId|String||-->
 
 ### Response
-If successful, this method returns `202 Accepted` response code.
+If successful, this method returns a `202 Accepted` response code.
 
 ### Example
 Here is an example of how to call this API.
@@ -54,7 +54,7 @@ Content-Length: 48
 ```
 
 ##### Response
-Here is an example of the response. <!--TEST no copy*Model in O365 implementation-->
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,

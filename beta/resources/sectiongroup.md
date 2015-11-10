@@ -63,20 +63,20 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|parentNotebook|[notebook](notebook.md)|The notebook that contains the section group. Read-only.|
-|parentSectionGroup|[sectionGroup](sectiongroup.md)|The section group that contains the section group. Read-only.|
-|sectionGroups|[sectionGroup](sectiongroup.md) collection|The section groups in the section. Read-only. Nullable.|
-|sections|[section](section.md) collection|The sections in the section group. Read-only. Nullable.|
+|parentNotebook|[Notebook](notebook.md)|The notebook that contains the section group. Read-only.|
+|parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section group. Read-only.|
+|sectionGroups|[SectionGroup](sectiongroup.md) collection|The section groups in the section. Read-only. Nullable.|
+|sections|[Section](section.md) collection|The sections in the section group. Read-only. Nullable.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get sectionGroup](../api/sectiongroup_get.md) | [sectionGroup](sectiongroup.md) |Read the properties and relationships of the sectionGroup object.|
-|[Create sectionGroup](../api/sectiongroup_post_sectiongroups.md) |[sectionGroup](sectiongroup.md)| Create a new section group by posting to the sectionGroups collection in the specified section group.|
-|[List sectionGroups](../api/sectiongroup_list_sectiongroups.md) |[sectionGroup](sectiongroup.md) collection| Get collection of sectionGroup objects in the specified section group.|
-|[Create section](../api/sectiongroup_post_sections.md) |[section](section.md)| Create a new section by posting to the sections collection in the specified section group.|
-|[List sections](../api/sectiongroup_list_sections.md) |[section](section.md) collection| Get a collection of section objects in the specified section group.|
+|[Get sectionGroup](../api/sectiongroup_get.md) | [SectionGroup](sectiongroup.md) |Read the properties and relationships of the section group.|
+|[Create sectionGroup](../api/sectiongroup_post_sectiongroups.md) |[SectionGroup](sectiongroup.md)| Create a section group by posting to the sectionGroups collection in the specified section group.|
+|[List sectionGroups](../api/sectiongroup_list_sectiongroups.md) |[SectionGroup](sectiongroup.md) collection| Get collection of section groups in the specified section group.|
+|[Create section](../api/sectiongroup_post_sections.md) |[Section](section.md)| Create a section by posting to the sections collection in the specified section group.|
+|[List sections](../api/sectiongroup_list_sections.md) |[Section](section.md) collection| Get a collection of sections in the specified section group.|
 
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

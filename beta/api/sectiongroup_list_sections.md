@@ -15,13 +15,13 @@ GET /groups/<objectId>/notes/sectionGroups/<id>/sections
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities.|
+|$count|none|The count of related entities to return in the result set.|
 |$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands `parentNotebook` and `parentSectionGroup` and selects their `id`, `name`, and `self` properties. Valid values for sections are `parentNotebook` and `parentSectionGroup`. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
 |$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection. The default is `name asc`.|
 |$select|string|Comma-separated list of properties to include in the response.|
-|$skip|int|The number of items to skip in a result set.|
-|$top|int|The number of items to return in a result set.|
+|$skip|int|The number of items to skip in the result set.|
+|$top|int|The number of items to return in the result set.|
 
 ### Request headers
 | Name       | Type | Description|
@@ -32,7 +32,7 @@ GET /groups/<objectId>/notes/sectionGroups/<id>/sections
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [section](../resources/section.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [section](../resources/section.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
