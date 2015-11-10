@@ -10,11 +10,9 @@ https://graph.microsoft.com/<version>/<context>/notes/
 
 OneNote support is in preview, so the version is always `beta`. 
 
-Only user and group contexts are supported. Accessing SharePoint site notebooks is currently not supported. Choosing the permission scopes your app should request depends both on the context and your app's functionality. 
+Only user and group contexts are supported. Accessing SharePoint site notebooks is currently not supported. 
 
-**User notebooks**
-
-To access OneNote notebooks that are owned by a user, use one of the following service root URLs:
+**User notebooks** To access OneNote notebooks that are owned by a user, use one of the following service root URLs:
 
 ```
 https://graph.microsoft.com/beta/me/notes/ (current user)
@@ -22,34 +20,30 @@ https://graph.microsoft.com/beta/users/<mail>/notes/
 https://graph.microsoft.com/beta/users/<objectId>/notes/
 ```
 
-The following permission scopes apply to user-context routes:
-
-|Scope|Permission|Description|
-|:------|:------|:------|
-| Notes.Create | Create pages in OneNote notebooks | Can view the titles of your notebooks and sections; create new pages in any location. Cannot view or edit existing pages. |  
-| Notes.ReadWrite.CreatedByApp | Application-only OneNote notebook access | Can view the titles of your notebooks and sections; create new pages; view and modify pages created by the app. Cannot view or modify pages created by other apps or in password protected sections. |  
-| Notes.Read | View OneNote notebooks | Can view the contents of your notebooks and sections. Cannot create new pages; modify existing pages; access password protected sections. |  
-| Notes.ReadWrite | View and modify OneNote notebooks | Can view the titles of your notebooks and sections; view and modify all your pages; create new pages. Cannot access password protected sections. |  
-
-
-**Group notebooks**
-
-To access OneNote notebooks that are owned by a group, use the following service root URL:
+**Group notebooks** To access OneNote notebooks that are owned by a group, use the following service root URL:
 
 ```
 https://graph.microsoft.com/beta/groups/<objectId>/notes/
 ```
 
-The following permission scopes apply to the group-context route:
+The following permission scopes provide levels of access to OneNote notebooks. Choosing permission scopes depends both on the context and your app's functionality. 
 
 |Scope|Permission|Description|
 |:------|:------|:------|
-| Notes.Read.All | Read all groups | Can read all group properties and memberships; read group calendar and conversations on public groups and groups the signed in user is a member of. |  
-| Notes.ReadWrite.All | Read and write all groups | Can create groups on behalf of the signed-in user and read all group properties and memberships; update group properties and memberships for groups the signed-in user owns; read and write group calendar and conversations on public groups and groups the signed-in user is a member of. |  
-| Group.Read |  |  |
-| Group.Write |  |  |
-| Group.Read.All | Read all groups | Can read all group properties and memberships; read group calendar and conversations on public groups and groups the signed in user is a member of. | 
-| Group.ReadWrite.All | Read and write all groups | Can create groups on behalf of the signed-in user and read all group properties and memberships; update group properties and memberships for groups the signed-in user owns; read and write group calendar and conversations on public groups and groups the signed-in user is a member of. | 
+| Notes.Create | Create pages in OneNote notebooks | Applies to notebooks owned by the current user. Can view the titles of your notebooks and sections; create new pages in any location. Cannot view or edit existing pages. |  
+| Notes.ReadWrite.CreatedByApp | Application-only OneNote notebook access | Applies to notebooks owned by the current user. Can view the titles of your notebooks and sections; create new pages; view and modify pages created by the app. Cannot view or modify pages created by other apps or in password protected sections. |  
+| Notes.Read | View OneNote notebooks | Applies to notebooks owned by the current user. Can view the contents of your notebooks and sections. Cannot create new pages; modify existing pages; access password protected sections. |  
+| Notes.ReadWrite | View and modify OneNote notebooks | Applies to notebooks owned by the current user. Can view the titles of your notebooks and sections; view and modify all your pages; create new pages. Cannot access password protected sections. |  
+| Notes.Read.All | View OneNote notebooks in your organization | Applies to group notebooks and other shared OneNote content. Can view the contents of notebooks and sections in all notebooks that the signed-in user has access to. Cannot create new pages; modify existing pages; access password protected sections. |  
+| Notes.ReadWrite.All | View and modify OneNote notebooks in your organization | Applies to group notebooks and other shared OneNote content. Can view the titles of notebooks and sections; view and modify all pages; create new pages in all notebooks that the signed-in user has access to. Cannot access password protected sections. |  
+
+The following Group permissions also apply to OneNote operations. So, you don't need to request Notes permissions if you're targeting group notebooks only.
+
+|Scope|Permission|Description|
+|:------|:------|:------|
+| Group.Read.All | Read all groups | Applies to group notebooks. Can read all group properties and memberships; read group calendar and conversations on public groups and groups the signed in user is a member of. | 
+| Group.ReadWrite.All | Read and write all groups | Applies to group notebooks. Can create groups on behalf of the signed-in user and read all group properties and memberships; update group properties and memberships for groups the signed-in user owns; read and write group calendar and conversations on public groups and groups the signed-in user is a member of. | 
+
 
 
 <!-- {
