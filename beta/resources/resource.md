@@ -50,7 +50,9 @@ None
 
 
 ### Methods
-None
+| Method		   | Return Type	|Description|
+|:---------------|:--------|:----------|
+|[Get resource binary data](../api/resource_get.md) | Stream |Retrieve the binary data of a file or image resource.|
 
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
