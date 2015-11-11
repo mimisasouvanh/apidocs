@@ -22,7 +22,7 @@ Here is a JSON representation of the resource.
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|state|String||Represents the state of the deleted item.
+|state|String|Represents the state of the deleted item.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
