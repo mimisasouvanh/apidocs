@@ -2,8 +2,6 @@
 
 Deletes an item by using its ID or path. Note that deleting items using this method will move the items to the Recycle Bin, instead of permanently deleting them.
 
-For more info about deleting items in OneDrive, see [Delete an item in OneDrive](https://dev.onedrive.com/items/delete.htm).
-
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 
@@ -44,6 +42,10 @@ If successful, this call returns a `204 No Content` response to indicate that re
 ```http
 HTTP/1.1 204 No Content
 ```
+
+## More resources
+
+For more info about deleting items in OneDrive, see [Delete an item in OneDrive](https://dev.onedrive.com/items/delete.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

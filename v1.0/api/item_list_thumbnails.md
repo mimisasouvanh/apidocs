@@ -16,8 +16,6 @@ Here are the most common ones:
 * Upload a custom thumbnail for an item
 * Determine if a custom uploaded thumbnail exists
 
-For more info about thumbnails, see [Thumbnails for an item on OneDrive](https://dev.onedrive.com/items/thumbnails.htm).
-
 ### HTTP request
 
 <!-- { "blockType": "ignored" } -->
@@ -310,6 +308,8 @@ HTTP/1.1 200 OK
 `GET /drive/root:/{item-path}?expand=children(expand=thumbnails)`
 
 `GET /drive/items/{item-id}/children?expand=thumbnails`
+
+For more info about thumbnails, see [Thumbnails for an item on OneDrive](https://dev.onedrive.com/items/thumbnails.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

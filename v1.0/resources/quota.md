@@ -1,6 +1,6 @@
 # quota resource type
 
-The quota resource provides details about drive quota.
+The **quota** resource provides details about drive quota.
 
 ### JSON representation
 
