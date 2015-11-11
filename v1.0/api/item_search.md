@@ -7,8 +7,6 @@ children of that item. Filtering works on the collection of items returned,
 which can be either all children when using search, or just the immediate
 children when using a collection.
 
-For more info, see [Searching and filtering Items in OneDrive](https://dev.onedrive.com/items/search.htm).
-
 ### Prerequisites
 The following **scopes** are required to execute this API:
 
@@ -100,6 +98,8 @@ Content-type: application/json
 * `createdBy`
 * `modifiedBy`
 * `parentReference`
+
+For more info, see [Searching and filtering Items in OneDrive](https://dev.onedrive.com/items/search.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

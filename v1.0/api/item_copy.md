@@ -2,8 +2,6 @@
 
 Creates a copy of an [item](resources/item.md) (including any children) on OneDrive, under a new parent.
 
-For more info about how to copy an item on OneDrive, see [Copy an item on OneDrive](https://dev.onedrive.com/items/copy.htm).
-
 ## Prerequisites
 The following **scopes** are required to execute this API:
 
@@ -59,6 +57,11 @@ Location: https://onedrive.com/monitor/113jlkjlkjasd1212abcascaf
 
 The value of the `Location` header provides a URL for a service that will return
 the current state of the copy operation. You can use this info to determine when the copy has finished.
+
+
+## More resources
+
+For more info about how to copy an item on OneDrive, see [Copy an item on OneDrive](https://dev.onedrive.com/items/copy.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

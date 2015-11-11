@@ -3,8 +3,6 @@
 Items with the folder resource may contain one or more child items. This API
 lists the contents of the item's `children` collection using either the item ID or path to the item.
 
-For more info, see [List children for a OneDrive item](https://dev.onedrive.com/items/list.htm).
-
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 
@@ -74,6 +72,7 @@ Content-type: application/json
 
 **Note:** If a collection exceeds the default page size (200 items), the **@odata.nextLink** property is returned in the response to indicate more items are available and provide the request URL for the next page of items. You can control the page size through
 [optional query string parameters](https://dev.onedrive.com/odata/optional-query-parameters.htm).
+For more info, see [List children for a OneDrive item](https://dev.onedrive.com/items/list.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

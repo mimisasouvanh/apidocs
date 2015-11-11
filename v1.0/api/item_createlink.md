@@ -7,8 +7,6 @@ The **createLink** method will create a new sharing link if the specified
 link type doesn't already exist. If a sharing link of the specified type already
 exists for the app, the existing sharing link will be returned.
 
-For more info about sharing links, see [Create a sharing link for an item in OneDrive](https://dev.onedrive.com/items/sharing_createLink.htm).
-
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 
@@ -88,6 +86,7 @@ Content-Type: application/json
 
 ### Notes
 Sharing links created using this action do not expire. They are visible in the sharing permissions for the item on the OneDrive website and can be removed by an owner of the item. Sharing links always point to the "current" version of an item.
+For more info about sharing links, see [Create a sharing link for an item in OneDrive](https://dev.onedrive.com/items/sharing_createLink.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
