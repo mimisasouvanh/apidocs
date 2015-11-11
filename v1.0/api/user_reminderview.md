@@ -8,6 +8,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /users/<userPrincipalName>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
 ```
 ### Request headers
 | Header       | Value|

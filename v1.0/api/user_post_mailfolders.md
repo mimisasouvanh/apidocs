@@ -8,6 +8,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/mailFolders
+POST /users/<userPrincipalName>/mailFolders
 ```
 ### Request headers
 | Header       | Value |

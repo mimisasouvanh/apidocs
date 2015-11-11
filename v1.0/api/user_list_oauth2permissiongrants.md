@@ -7,6 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/oauth2PermissionGrants
+GET /users/<userPrincipalName>/oauth2PermissionGrants
 GET /drive/root/createdByUser/oauth2PermissionGrants
 GET /drive/root/lastModifiedByUser/oauth2PermissionGrants
 ```

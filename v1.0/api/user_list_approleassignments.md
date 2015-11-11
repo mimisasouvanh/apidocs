@@ -7,6 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/appRoleAssignments
+GET /users/<userPrincipalName>/appRoleAssignments
 GET /drive/root/createdByUser/appRoleAssignments
 GET /drive/root/lastModifiedByUser/appRoleAssignments
 ```
