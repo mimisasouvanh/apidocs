@@ -1,6 +1,17 @@
 # Get page
 
 Retrieve the properties and relationships of a [page](../resources/page.md) object.
+
+**Getting page content**
+
+You can use the page's `content` endpoint to get the HTML content of a page:
+
+```
+GET /me/notes/pages/<id>/content[?includeIDs=true]
+```
+
+The `includeIDs=true` query option is used to [update pages](../api/page_update.md).
+
 ### Prerequisites
 One of the following **scopes** is required to execute this API:  
 Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or Notes.ReadWrite.All
