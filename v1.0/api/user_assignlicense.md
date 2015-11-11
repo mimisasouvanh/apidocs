@@ -20,8 +20,8 @@ In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|addLicenses|AssignedLicense||
-|removeLicenses|Guid||
+|addLicenses|AssignedLicense|A collection of [AssignedLicense](../resources/assignedlicense.md) objects that specify the licenses to add. You can disable plans associated with a license by setting the **disabledPlans** property on an [AssignedLicense](../resources/assignedlicense.md) object.|
+|removeLicenses|Guid|A collection of GUIDs that identify the licenses to remove.|
 
 ### Response
 If successful, this method returns `200, OK` response code and [User](../resources/user.md) object in the response body.
