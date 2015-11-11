@@ -7,6 +7,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/sendMail
+POST /users/<userPrincipalName>/sendMail
 ```
 ### Request headers
 | Header       | Value |

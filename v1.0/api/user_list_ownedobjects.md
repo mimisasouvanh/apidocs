@@ -9,6 +9,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/ownedObjects
+GET /users/<userPrincipalName>/ownedObjects
 ```
 ### Optional query parameters
 |Name|Value|Description|

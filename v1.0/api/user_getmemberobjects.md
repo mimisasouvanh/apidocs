@@ -8,6 +8,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/getMemberObjects
+POST /users/<userPrincipalName>/getMemberObjects
 ```
 ### Request headers
 | Header       | Value |

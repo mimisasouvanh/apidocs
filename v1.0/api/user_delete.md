@@ -8,6 +8,7 @@ One of the following **scopes** is required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>
+DELETE /users/<userPrincipalName>
 ```
 
 ### Request headers

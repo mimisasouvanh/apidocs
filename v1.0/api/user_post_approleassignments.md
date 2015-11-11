@@ -7,6 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/appRoleAssignments
+POST /users/<userPrincipalName>/appRoleAssignments
 POST /drive/root/createdByUser/appRoleAssignments
 POST /drive/root/lastModifiedByUser/appRoleAssignments
 
