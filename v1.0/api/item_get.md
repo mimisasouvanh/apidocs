@@ -2,8 +2,6 @@
 
 Retrieve the metadata for an item on OneDrive by path or ID.
 
-For more info, see [Get metadata for a OneDrive item](https://dev.onedrive.com/items/get.htm).
-
 ## Prerequisites
 The following **scopes** are required to execute this API:
 
@@ -105,6 +103,10 @@ Accept: application/json
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
+
+## More resources
+
+For more info, see [Get metadata for a OneDrive item](https://dev.onedrive.com/items/get.htm).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
