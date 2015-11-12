@@ -1,12 +1,12 @@
-# Create Group
+# Create group
 
-Use this API to create a new Group.
+Use this API to create a new group.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drives
+POST /groups
 
 ```
 ### Request headers
@@ -15,23 +15,23 @@ POST /drives
 | X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
-In the request body, supply a JSON representation of [Group](../resources/group.md) object.
+In the request body, supply a JSON representation of [group](../resources/group.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [Group](../resources/group.md) object in the response body.
+If successful, this method returns `201, Created` response code and [group](../resources/group.md) object in the response body.
 
 ### Example
 ##### Request
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_group_from_drives"
+  "name": "create_group_from_groups"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drives
+POST https://graph.microsoft.com/v1.0/groups
 ```
-In the request body, supply a JSON representation of [Group](../resources/group.md) object.
+In the request body, supply a JSON representation of [group](../resources/group.md) object.
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -42,7 +42,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1009
+Content-length: 996
 
 {
   "description": "description-value",
@@ -72,7 +72,8 @@ Content-length: 1009
     "proxyAddresses-value"
   ],
   "securityEnabled": true,
-  "accessType": "accessType-value",
+  "accessType": {
+  },
   "allowExternalSenders": true,
   "autoSubscribeNewMembers": true,
   "emailAddress": "emailAddress-value",
@@ -89,7 +90,7 @@ Content-length: 1009
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create Group",
+  "description": "Create group",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

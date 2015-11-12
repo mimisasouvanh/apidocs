@@ -1,12 +1,12 @@
-# Create Device
+# Create device
 
-Use this API to create a new Device.
+Use this API to create a new device.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /deviceConfiguration
+POST /devices
 
 ```
 ### Request headers
@@ -15,23 +15,23 @@ POST /deviceConfiguration
 | X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
-In the request body, supply a JSON representation of [Device](../resources/device.md) object.
+In the request body, supply a JSON representation of [device](../resources/device.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [Device](../resources/device.md) object in the response body.
+If successful, this method returns `201, Created` response code and [device](../resources/device.md) object in the response body.
 
 ### Example
 ##### Request
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_device_from_deviceconfiguration"
+  "name": "create_device_from_devices"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/deviceConfiguration
+POST https://graph.microsoft.com/v1.0/devices
 ```
-In the request body, supply a JSON representation of [Device](../resources/device.md) object.
+In the request body, supply a JSON representation of [device](../resources/device.md) object.
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -76,7 +76,7 @@ Content-length: 732
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create Device",
+  "description": "Create device",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

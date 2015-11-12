@@ -22,7 +22,7 @@ GET /groups
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Group](../resources/group.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [group](../resources/group.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1186
+Content-length: 1177
 
 {
   "value": [
@@ -76,7 +76,8 @@ Content-length: 1186
         "proxyAddresses-value"
       ],
       "securityEnabled": true,
-      "accessType": "accessType-value",
+      "accessType": {
+      },
       "allowExternalSenders": true,
       "autoSubscribeNewMembers": true,
       "emailAddress": "emailAddress-value",
