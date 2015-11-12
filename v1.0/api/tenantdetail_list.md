@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1892
+Content-length: 1906
 
 {
   "value": [
@@ -59,8 +59,7 @@ Content-length: 1892
         }
       ],
       "city": "city-value",
-      "companyLastDirSyncTime": {
-      },
+      "companyLastDirSyncTime": "datetime-value",
       "country": "country-value",
       "countryLetterCode": "countryLetterCode-value",
       "dirSyncEnabled": true,
@@ -110,8 +109,7 @@ Content-length: 1892
       ],
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": {
-      }
+      "deletionTimestamp": "datetime-value"
     }
   ]
 }

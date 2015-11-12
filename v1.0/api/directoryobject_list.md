@@ -44,15 +44,14 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 145
+Content-length: 152
 
 {
   "value": [
     {
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": {
-      }
+      "deletionTimestamp": "datetime-value"
     }
   ]
 }

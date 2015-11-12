@@ -42,7 +42,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 699
+Content-length: 732
 
 {
   "accountEnabled": true,
@@ -53,8 +53,7 @@ Content-length: 699
       "key": "key-value"
     }
   ],
-  "approximateLastLogonTimestamp": {
-  },
+  "approximateLastLogonTimestamp": "datetime-value",
   "deviceId": "deviceId-value",
   "deviceMetadata": "deviceMetadata-value",
   "deviceObjectVersion": 99,
@@ -66,12 +65,10 @@ Content-length: 699
   "deviceTrustType": "deviceTrustType-value",
   "dirSyncEnabled": true,
   "displayName": "displayName-value",
-  "lastDirSyncTime": {
-  },
+  "lastDirSyncTime": "datetime-value",
   "objectType": "objectType-value",
   "objectId": "objectId-value",
-  "deletionTimestamp": {
-  }
+  "deletionTimestamp": "datetime-value"
 }
 ```
 

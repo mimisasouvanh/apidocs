@@ -43,7 +43,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 329
+Content-length: 336
 
 {
   "value": [
@@ -55,8 +55,7 @@ Content-length: 329
       "roleTemplateId": "roleTemplateId-value",
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": {
-      }
+      "deletionTimestamp": "datetime-value"
     }
   ]
 }

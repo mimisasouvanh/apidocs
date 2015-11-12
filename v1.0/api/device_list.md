@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 836
+Content-length: 857
 
 {
   "value": [
@@ -57,8 +57,7 @@ Content-length: 836
           "key": "key-value"
         }
       ],
-      "approximateLastLogonTimestamp": {
-      },
+      "approximateLastLogonTimestamp": "datetime-value",
       "deviceId": "deviceId-value",
       "deviceMetadata": "deviceMetadata-value",
       "deviceObjectVersion": 99,
@@ -70,12 +69,10 @@ Content-length: 836
       "deviceTrustType": "deviceTrustType-value",
       "dirSyncEnabled": true,
       "displayName": "displayName-value",
-      "lastDirSyncTime": {
-      },
+      "lastDirSyncTime": "datetime-value",
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": {
-      }
+      "deletionTimestamp": "datetime-value"
     }
   ]
 }
