@@ -44,15 +44,14 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1906
+Content-length: 1912
 
 {
   "value": [
     {
       "assignedPlans": [
         {
-          "assignedTimestamp": {
-          },
+          "assignedTimestamp": "datetime-value",
           "capabilityStatus": "capabilityStatus-value",
           "service": "service-value",
           "servicePlanId": "servicePlanId-value"
@@ -81,8 +80,7 @@ Content-length: 1906
           "errorDetail": "errorDetail-value",
           "resolved": true,
           "service": "service-value",
-          "timestamp": {
-          }
+          "timestamp": "datetime-value"
         }
       ],
       "securityComplianceNotificationMails": [

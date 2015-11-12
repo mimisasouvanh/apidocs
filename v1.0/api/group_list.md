@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1174
+Content-length: 1177
 
 {
   "value": [
@@ -69,8 +69,7 @@ Content-length: 1174
           "errorDetail": "errorDetail-value",
           "resolved": true,
           "service": "service-value",
-          "timestamp": {
-          }
+          "timestamp": "datetime-value"
         }
       ],
       "proxyAddresses": [
