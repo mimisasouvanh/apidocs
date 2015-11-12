@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<objectId>/resetUnseenCount
-POST /users/<objectId>/joinedGroups/<objectId>/resetUnseenCount
-POST /drive/root/createdByUser/joinedGroups/<objectId>/resetUnseenCount
+POST /groups/<objectId>/Microsoft.Graph.resetUnseenCount
+POST /users/<objectId>/joinedGroups/<objectId>/Microsoft.Graph.resetUnseenCount
+POST /drive/root/createdByUser/joinedGroups/<objectId>/Microsoft.Graph.resetUnseenCount
 
 ```
 ### Request headers
@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "group_resetunseencount"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<objectId>/resetUnseenCount
+POST https://graph.microsoft.com/beta/groups/<objectId>/Microsoft.Graph.resetUnseenCount
 ```
 
 ##### Response

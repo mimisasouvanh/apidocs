@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/allPhotos
-POST /drives/<id>/allPhotos
-POST /users/<objectId>/drive/allPhotos
+POST /drive/Microsoft.Graph.allPhotos
+POST /drives/<id>/Microsoft.Graph.allPhotos
+POST /users/<objectId>/drive/Microsoft.Graph.allPhotos
 
 ```
 ### Request headers
@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "drive_allphotos"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/allPhotos
+POST https://graph.microsoft.com/beta/drive/Microsoft.Graph.allPhotos
 ```
 
 ##### Response

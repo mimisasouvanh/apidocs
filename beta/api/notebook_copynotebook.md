@@ -7,10 +7,10 @@ Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/notes/notebooks/<id>/copyNotebook
-POST /users/<mail>/notes/notebooks/<id>/copyNotebook
-POST /users/<objectId>/notes/notebooks/<id>/copyNotebook
-POST /groups/<objectId>/notes/notebooks/<id>/copyNotebook
+POST /me/notes/notebooks/<id>/Microsoft.Graph.copyNotebook
+POST /users/<mail>/notes/notebooks/<id>/Microsoft.Graph.copyNotebook
+POST /users/<objectId>/notes/notebooks/<id>/Microsoft.Graph.copyNotebook
+POST /groups/<objectId>/notes/notebooks/<id>/Microsoft.Graph.copyNotebook
 
 ```
 ### Request headers
@@ -40,7 +40,7 @@ Here is an example of the request.
   "name": "notebook_copynotebook"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks/<id>/copyNotebook
+POST https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks/<id>/Microsoft.Graph.copyNotebook
 Content-Type: application/json
 Content-Length: 32
 

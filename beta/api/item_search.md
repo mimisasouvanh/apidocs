@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/root/search(q=q-value)
-POST /drive/items/<id>/search(q=q-value)
-POST /drives/<id>/root/search(q=q-value)
+POST /drive/root/Microsoft.Graph.search(q=q-value)
+POST /drive/items/<id>/Microsoft.Graph.search(q=q-value)
+POST /drives/<id>/root/Microsoft.Graph.search(q=q-value)
 
 ```
 ### Request headers
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "item_search"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/search
+POST https://graph.microsoft.com/beta/drive/root/Microsoft.Graph.search
 ```
 
 ##### Response

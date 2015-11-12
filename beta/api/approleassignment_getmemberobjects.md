@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/appRoleAssignments/<objectId>/getMemberObjects
-POST /servicePrincipals/<objectId>/appRoleAssignedTo/getMemberObjects
-POST /groups/<objectId>/appRoleAssignments/<objectId>/getMemberObjects
+POST /users/<objectId>/appRoleAssignments/<objectId>/Microsoft.Graph.getMemberObjects
+POST /servicePrincipals/<objectId>/appRoleAssignedTo/Microsoft.Graph.getMemberObjects
+POST /groups/<objectId>/appRoleAssignments/<objectId>/Microsoft.Graph.getMemberObjects
 
 ```
 ### Request headers
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "approleassignment_getmemberobjects"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/appRoleAssignments/<objectId>/getMemberObjects
+POST https://graph.microsoft.com/beta/users/<objectId>/appRoleAssignments/<objectId>/Microsoft.Graph.getMemberObjects
 Content-type: application/json
 Content-length: 33
 

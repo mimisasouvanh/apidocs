@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/root/copy
-POST /drive/items/<id>/copy
-POST /drives/<id>/root/copy
+POST /drive/root/Microsoft.Graph.copy
+POST /drive/items/<id>/Microsoft.Graph.copy
+POST /drives/<id>/root/Microsoft.Graph.copy
 
 ```
 ### Request headers
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "item_copy"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/copy
+POST https://graph.microsoft.com/beta/drive/root/Microsoft.Graph.copy
 Content-type: application/json
 Content-length: 133
 

@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/messages/<id>/replyAll
-POST /drive/root/createdByUser/messages/<id>/replyAll
-POST /drive/root/lastModifiedByUser/messages/<id>/replyAll
+POST /users/<objectId>/messages/<id>/Microsoft.Graph.replyAll
+POST /drive/root/createdByUser/messages/<id>/Microsoft.Graph.replyAll
+POST /drive/root/lastModifiedByUser/messages/<id>/Microsoft.Graph.replyAll
 
 ```
 ### Request headers
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "message_replyall"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/messages/<id>/replyAll
+POST https://graph.microsoft.com/beta/users/<objectId>/messages/<id>/Microsoft.Graph.replyAll
 Content-type: application/json
 Content-length: 32
 

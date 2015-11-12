@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /siteCollections/<id>/fromUrl(url=url-value)
+POST /siteCollections/<id>/Microsoft.Graph.fromUrl(url=url-value)
 
 ```
 ### Request headers
@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "sitecollection_fromurl"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/siteCollections/<id>/fromUrl
+POST https://graph.microsoft.com/beta/siteCollections/<id>/Microsoft.Graph.fromUrl
 ```
 
 ##### Response
