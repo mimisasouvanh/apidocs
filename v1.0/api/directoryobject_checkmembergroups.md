@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API: _Group.Read.All, Grou
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/checkMemberGroups
-POST /groups/<objectId>/checkMemberGroups
-POST /contacts/<objectId>/checkMemberGroups
+POST /users/<objectId>/Microsoft.Graph.checkMemberGroups
+POST /groups/<objectId>/Microsoft.Graph.checkMemberGroups
+POST /contacts/<objectId>/Microsoft.Graph.checkMemberGroups
 
 ```
 ### Request headers
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "directoryobject_checkmembergroups"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/checkMemberGroups
+POST https://graph.microsoft.com/v1.0/users/<objectId>/Microsoft.Graph.checkMemberGroups
 Content-type: application/json
 Content-length: 44
 

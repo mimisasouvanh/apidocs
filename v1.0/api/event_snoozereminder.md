@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/events/<id>/snoozeReminder
-POST /groups/<objectId>/events/<id>/snoozeReminder
-POST /users/<objectId>/calendarView/<id>/snoozeReminder
+POST /users/<objectId>/events/<id>/Microsoft.Graph.snoozeReminder
+POST /groups/<objectId>/events/<id>/Microsoft.Graph.snoozeReminder
+POST /users/<objectId>/calendarView/<id>/Microsoft.Graph.snoozeReminder
 
 ```
 ### Request headers
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "event_snoozereminder"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/events/<id>/snoozeReminder
+POST https://graph.microsoft.com/v1.0/users/<objectId>/events/<id>/Microsoft.Graph.snoozeReminder
 Content-type: application/json
 Content-length: 97
 

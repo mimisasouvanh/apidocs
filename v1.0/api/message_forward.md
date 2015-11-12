@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/messages/<id>/forward
-POST /drive/root/createdByUser/messages/<id>/forward
-POST /drive/root/lastModifiedByUser/messages/<id>/forward
+POST /users/<objectId>/messages/<id>/Microsoft.Graph.forward
+POST /drive/root/createdByUser/messages/<id>/Microsoft.Graph.forward
+POST /drive/root/lastModifiedByUser/messages/<id>/Microsoft.Graph.forward
 
 ```
 ### Request headers
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "message_forward"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/messages/<id>/forward
+POST https://graph.microsoft.com/v1.0/users/<objectId>/messages/<id>/Microsoft.Graph.forward
 Content-type: application/json
 Content-length: 166
 

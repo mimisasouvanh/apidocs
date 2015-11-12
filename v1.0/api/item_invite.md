@@ -11,9 +11,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/root/invite
-POST /drive/items/<id>/invite
-POST /drives/<id>/root/invite
+POST /drive/root/Microsoft.Graph.invite
+POST /drive/items/<id>/Microsoft.Graph.invite
+POST /drives/<id>/root/Microsoft.Graph.invite
 
 ```
 
@@ -40,7 +40,7 @@ Here is an example of the request.
   "name": "item_invite"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drive/root/invite
+POST https://graph.microsoft.com/v1.0/drive/root/Microsoft.Graph.invite
 Content-type: application/json
 Content-length: 313
 
