@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/assignLicense
-POST /drive/root/createdByUser/assignLicense
-POST /drive/root/lastModifiedByUser/assignLicense
+POST /users/<objectId>/Microsoft.Graph.assignLicense
+POST /drive/root/createdByUser/Microsoft.Graph.assignLicense
+POST /drive/root/lastModifiedByUser/Microsoft.Graph.assignLicense
 
 ```
 ### Request headers
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "user_assignlicense"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/assignLicense
+POST https://graph.microsoft.com/beta/users/<objectId>/Microsoft.Graph.assignLicense
 Content-type: application/json
 Content-length: 185
 

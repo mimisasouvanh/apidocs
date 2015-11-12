@@ -6,10 +6,10 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/notes/pages/<id>/patchContent
-POST /users/<mail>/notes/pages/<id>/patchContent
-POST /users/<objectId>/notes/pages/<id>/patchContent
-POST /groups/<objectId>/notes/pages/<id>/patchContent
+POST /me/notes/pages/<id>/Microsoft.Graph.patchContent
+POST /users/<mail>/notes/pages/<id>/Microsoft.Graph.patchContent
+POST /users/<objectId>/notes/pages/<id>/Microsoft.Graph.patchContent
+POST /groups/<objectId>/notes/pages/<id>/Microsoft.Graph.patchContent
 ```
 ### Request headers
 | Name       | Type | Description|
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "page_patchcontent"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>/patchContent
+POST https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>/Microsoft.Graph.patchContent
 Content-type: application/json
 Content-length: 168
 

@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /drive/root/createdByUser/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /drive/root/lastModifiedByUser/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /users/<objectId>/Microsoft.Graph.reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /drive/root/createdByUser/Microsoft.Graph.reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /drive/root/lastModifiedByUser/Microsoft.Graph.reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
 
 ```
 ### Request headers
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "user_reminderview"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/reminderView
+POST https://graph.microsoft.com/beta/users/<objectId>/Microsoft.Graph.reminderView
 ```
 
 ##### Response

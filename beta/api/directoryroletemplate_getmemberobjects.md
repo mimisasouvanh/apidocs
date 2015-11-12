@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /directoryRoleTemplates/<objectId>/getMemberObjects
+POST /directoryRoleTemplates/<objectId>/Microsoft.Graph.getMemberObjects
 
 ```
 ### Request headers
@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "directoryroletemplate_getmemberobjects"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/directoryRoleTemplates/<objectId>/getMemberObjects
+POST https://graph.microsoft.com/beta/directoryRoleTemplates/<objectId>/Microsoft.Graph.getMemberObjects
 Content-type: application/json
 Content-length: 33
 
