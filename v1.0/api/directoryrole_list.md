@@ -21,7 +21,7 @@ GET /directoryRoles
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [DirectoryRole](../resources/directoryrole.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [directoryRole](../resources/directoryrole.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -43,7 +43,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 336
+Content-length: 329
 
 {
   "value": [
@@ -55,7 +55,8 @@ Content-length: 336
       "roleTemplateId": "roleTemplateId-value",
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": "datetime-value"
+      "deletionTimestamp": {
+      }
     }
   ]
 }

@@ -22,7 +22,7 @@ GET /groups
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Group](../resources/group.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [group](../resources/group.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1186
+Content-length: 1160
 
 {
   "value": [
@@ -59,7 +59,8 @@ Content-length: 1186
         "groupTypes-value"
       ],
       "isPublic": true,
-      "lastDirSyncTime": "datetime-value",
+      "lastDirSyncTime": {
+      },
       "mail": "mail-value",
       "mailNickname": "mailNickname-value",
       "mailEnabled": true,
@@ -69,14 +70,16 @@ Content-length: 1186
           "errorDetail": "errorDetail-value",
           "resolved": true,
           "service": "service-value",
-          "timestamp": "datetime-value"
+          "timestamp": {
+          }
         }
       ],
       "proxyAddresses": [
         "proxyAddresses-value"
       ],
       "securityEnabled": true,
-      "accessType": "accessType-value",
+      "accessType": {
+      },
       "allowExternalSenders": true,
       "autoSubscribeNewMembers": true,
       "emailAddress": "emailAddress-value",
@@ -85,7 +88,8 @@ Content-length: 1186
       "unseenCount": 99,
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": "datetime-value"
+      "deletionTimestamp": {
+      }
     }
   ]
 }

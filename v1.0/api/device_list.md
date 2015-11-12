@@ -22,7 +22,7 @@ GET /devices
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Device](../resources/device.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [device](../resources/device.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 857
+Content-length: 836
 
 {
   "value": [
@@ -57,7 +57,8 @@ Content-length: 857
           "key": "key-value"
         }
       ],
-      "approximateLastLogonTimestamp": "datetime-value",
+      "approximateLastLogonTimestamp": {
+      },
       "deviceId": "deviceId-value",
       "deviceMetadata": "deviceMetadata-value",
       "deviceObjectVersion": 99,
@@ -69,10 +70,12 @@ Content-length: 857
       "deviceTrustType": "deviceTrustType-value",
       "dirSyncEnabled": true,
       "displayName": "displayName-value",
-      "lastDirSyncTime": "datetime-value",
+      "lastDirSyncTime": {
+      },
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": "datetime-value"
+      "deletionTimestamp": {
+      }
     }
   ]
 }

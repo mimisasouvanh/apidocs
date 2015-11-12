@@ -22,7 +22,7 @@ GET /directoryObjects
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [DirectoryObject](../resources/directoryobject.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [directoryObject](../resources/directoryobject.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -44,14 +44,15 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 152
+Content-length: 145
 
 {
   "value": [
     {
       "objectType": "objectType-value",
       "objectId": "objectId-value",
-      "deletionTimestamp": "datetime-value"
+      "deletionTimestamp": {
+      }
     }
   ]
 }
