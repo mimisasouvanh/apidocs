@@ -7,8 +7,8 @@ One of the following **scopes** is required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/assignLicense
-POST /users/<userPrincipalName>/assignLicense
+POST /users/<objectId>/Microsoft.Graph.assignLicense
+POST /users/<userPrincipalName>/Microsoft.Graph.assignLicense
 ```
 ### Request headers
 | Header       | Value |
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "user_assignlicense"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/assignLicense
+POST https://graph.microsoft.com/v1.0/users/<objectId>/Microsoft.Graph.assignLicense
 Content-type: application/json
 
 {

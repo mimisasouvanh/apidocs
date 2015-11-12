@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<objectId>/addFavorite
-POST /users/<objectId>/joinedGroups/<objectId>/addFavorite
-POST /drive/root/createdByUser/joinedGroups/<objectId>/addFavorite
+POST /groups/<objectId>/Microsoft.Graph.addFavorite
+POST /users/<objectId>/joinedGroups/<objectId>/Microsoft.Graph.addFavorite
+POST /drive/root/createdByUser/joinedGroups/<objectId>/Microsoft.Graph.addFavorite
 
 ```
 ### Request headers
@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "group_addfavorite"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/groups/<objectId>/addFavorite
+POST https://graph.microsoft.com/v1.0/groups/<objectId>/Microsoft.Graph.addFavorite
 ```
 
 ##### Response

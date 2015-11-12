@@ -68,9 +68,6 @@ Here is a JSON representation of the resource.
     "@odata.type": "microsoft.graph.location"
   },
   "name": "String-value",
-  "openWith": {
-    "@odata.type": "microsoft.graph.openwithset"
-  },
   "parentReference": {
     "@odata.type": "microsoft.graph.itemreference"
   },
@@ -84,9 +81,6 @@ Here is a JSON representation of the resource.
   },
   "searchResult": {
     "@odata.type": "microsoft.graph.searchresult"
-  },
-  "shared": {
-    "@odata.type": "microsoft.graph.shared"
   },
   "size": 1024,
   "specialFolder": {
@@ -105,7 +99,6 @@ Here is a JSON representation of the resource.
   "video": {
     "@odata.type": "microsoft.graph.video"
   },
-  "webDavUrl": "String-value",
   "webUrl": "String-value"
 }
 
@@ -130,15 +123,12 @@ Here is a JSON representation of the resource.
 |lastModifiedDateTime|DateTimeOffset|Date and time the item was last modified. Read-only. |
 |location|[location](location.md)|Location metadata, if the item has location data. Read-only. |
 |name|String|The name of the item (filename and extension). Read-write. |
-|openWith|[openWithSet](openwithset.md)|Information about how to open the item.|
 |parentReference|[itemReference](itemreference.md)|Parent information, if the item has a parent. Read-write. |
 |photo|[photo](photo.md)|Photo metadata, if the item is a photo. Read-only. |
 |searchResult|[searchResult](searchresult.md)|Search metadata, if the item is from a search result. |
-|shared|[shared](shared.md)||
 |size|Int64|Size of the item in bytes. Read-only. |
 |specialFolder|[specialFolder](specialfolder.md)||
 |video|[video](video.md)|Video metadata, if the item is a video. Read-only. |
-|webDavUrl|String||
 |webUrl|String|URL that displays the resource in the browser. Read-only. |
 
 **Note:** The eTag and cTag properties work differently on containers (folders). The cTag value is modified when content or metadata of any descendant of the folder is changed. The eTag value is only modified when the folder's properties are changed, except for properties that are derived from descendants (like childCount or lastModifiedDateTime).
@@ -175,8 +165,8 @@ Instance attributes are properties with special behaviors. This properties are t
 | [Create permission](../api/item_post_permissions.md) | [permission](permission.md)                | Create a new permission by posting to the permissions collection.                      |
 | [List permissions](../api/item_list_permissions.md)  | [permission](permission.md) collection     | Get a permission object collection.                                                    |
 | [List thumbnails](../api/item_list_thumbnails.md)    | [thumbnailSet](thumbnailset.md) collection | Get a thumbnailSet object collection.                                                  |
-| [Update](../api/item_update.md)                      | [item](item.md)                            | Update item object.                                                                    |
-| [Delete](../api/item_delete.md)                      | None                                       | Delete item object.                                                                    |
+| [update](../api/item_update.md)                      | [item](item.md)                            | Update item object.                                                                    |
+| [delete](../api/item_delete.md)                      | None                                       | Delete item object.                                                                    |
 | [copy](../api/item_copy.md)                          | [item](item.md)                            | Copy an item to another location in the drive.                                         |
 | [createLink](../api/item_createlink.md)              | [permission](permission.md)                | Create a sharing link to allow users to access the content without signing in.         |
 | [invite](../api/item_invite.md)                      | [permission](permission.md) collection     | Invite users to access the item by adding permissions and sending them a notification. |
