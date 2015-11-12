@@ -8,8 +8,8 @@ The following **scopes** are required to execute this API: _Group.Read.All_ OR _
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<id>/Microsoft.Graph.Microsoft.Graph.getMemberObjects
-POST /groups/<id>/Microsoft.Graph.Microsoft.Graph.getMemberObjects
+POST /users/<id>/Microsoft.Graph.getMemberObjects
+POST /groups/<id>/Microsoft.Graph.getMemberObjects
 POST /contacts/<id>/Microsoft.Graph.getMemberObjects
 
 ```
