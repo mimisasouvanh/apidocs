@@ -1,5 +1,5 @@
 # checkMemberGroups
-Call the checkMemberGroups function to check for membership in a list of groups. The check is transitive.
+Check for membership in a list of groups. The check is transitive.
 
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 

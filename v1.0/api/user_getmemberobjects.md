@@ -1,5 +1,5 @@
 # user: getMemberObjects
-Call the getMemberObjects function to return all of the groups and directory roles that the user is a member of. The check is transitive, unlike reading the memberOf navigation property, which returns only the groups that the user is a direct member of.
+Return all of the groups and directory roles that the user is a member of. The check is transitive, unlike reading the memberOf navigation property, which returns only the groups that the user is a direct member of.
 
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
