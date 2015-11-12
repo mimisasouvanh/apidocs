@@ -7,8 +7,8 @@ One of the following **scopes** is required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /users/<userPrincipalName>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /users/<objectId>/Microsoft.Graph.reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
+POST /users/<userPrincipalName>/Microsoft.Graph.reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
 ```
 ### Request headers
 | Header       | Value|
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "user_reminderview"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>reminderView(startDateTime='2015-11-08T16:56:00',endDateTime='2015-11-12T00:56:00') 
+POST https://graph.microsoft.com/v1.0/users/<objectId>/Microsoft.Graph.reminderView(startDateTime='2015-11-08T16:56:00',endDateTime='2015-11-12T00:56:00') 
 ```
 
 ##### Response

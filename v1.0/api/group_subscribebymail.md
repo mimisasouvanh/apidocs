@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /groups/<objectId>/subscribeByMail
-POST /users/<objectId>/joinedGroups/<objectId>/subscribeByMail
-POST /drive/root/createdByUser/joinedGroups/<objectId>/subscribeByMail
+POST /groups/<objectId>/Microsoft.Graph.subscribeByMail
+POST /users/<objectId>/joinedGroups/<objectId>/Microsoft.Graph.subscribeByMail
+POST /drive/root/createdByUser/joinedGroups/<objectId>/Microsoft.Graph.subscribeByMail
 
 ```
 ### Request headers
@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "group_subscribebymail"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/groups/<objectId>/subscribeByMail
+POST https://graph.microsoft.com/v1.0/groups/<objectId>/Microsoft.Graph.subscribeByMail
 ```
 
 ##### Response

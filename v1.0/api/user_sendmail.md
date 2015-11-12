@@ -6,8 +6,8 @@ One of the following **scopes** is required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/sendMail
-POST /users/<userPrincipalName>/sendMail
+POST /users/<objectId>/Microsoft.Graph.sendMail
+POST /users/<userPrincipalName>/Microsoft.Graph.sendMail
 ```
 ### Request headers
 | Header       | Value |
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "user_sendmail"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/sendMail
+POST https://graph.microsoft.com/v1.0/users/<objectId>/Microsoft.Graph.sendMail
 Content-type: application/json
 
 {

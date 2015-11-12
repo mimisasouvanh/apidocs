@@ -11,8 +11,8 @@ The following **scopes** are required to execute this API:
 
 <!-- { "blockType": "ignored" } -->
 ```
-POST /drive/items/{item-id}/action.copy
-POST /drive/root:/{item-path}:/action.copy
+POST /drive/items/{item-id}/Microsoft.Graph.copy
+POST /drive/root:/{item-path}:/Microsoft.Graph.copy
 ```
 
 ### Request body
@@ -32,7 +32,7 @@ will occur.
 
 <!-- { "blockType": "request", "name": "copy-item" } -->
 ```http
-POST /drive/items/{item-id}/action.copy
+POST /drive/items/{item-id}/Microsoft.Graph.copy
 Content-Type: application/json
 Prefer: respond-async
 
